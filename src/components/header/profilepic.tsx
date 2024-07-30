@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import PPic from "@images/profilepic.png";
@@ -10,7 +10,9 @@ interface ProfilePicProps {
 export default function ProfilePic({ size = 2 }: ProfilePicProps) {
   const paddingSize = size / 8;
   const newSize = size - paddingSize;
-  const newSizepx = newSize * parseInt(getComputedStyle(document.body).getPropertyValue('font-size'));
+  const newSizepx =
+    newSize *
+    parseInt(getComputedStyle(document.body).getPropertyValue("font-size"));
 
   return (
     <div

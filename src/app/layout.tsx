@@ -9,8 +9,7 @@ export const metadata: Metadata = {
   title: "Vicktor Teixeira - Dev",
   description: "Vicktor Teixeira Developer Portfolio",
   authors: [{ name: "Vicktor Teixeira", url: "github.com/v1ckt" }],
-  keywords: ["Vicktor Teixeira", "Developer", "Portfolio", "Vicktor"],
-  viewport: "width=device-width, initial-scale=1",
+  keywords: ["Vicktor Teixeira", "Developer", "Portfolio", "Vicktor"]
 };
 
 export default function RootLayout({
