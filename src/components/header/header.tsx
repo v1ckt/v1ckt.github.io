@@ -6,7 +6,9 @@ import Profile from "./profile";
 import ThemeSwitcher from "./themeswitcher";
 import WorkStatus from "./workstatus";
 
-export default function Header() {
+export default function Header({
+  className,
+}: Readonly<{ className?: string }>) {
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,9 +16,11 @@ export default function Header() {
 
   return (
     <header
-      className={`flex items-center justify-between fixed h-16 w-full px-6 md:px-24 select-none
-        border-b-[1px] border-header-border-color backdrop-blur-xl bg-header-bg transition-[height] z-[9999]
-        ${menuOpen ? "h-full" : ""}`}
+      className={
+        `flex items-center justify-between fixed h-16 w-full px-6 md:px-24 select-none
+        border-b-[1px] border-header-border-color backdrop-blur-xl bg-header-bg transition-[height]
+        ${menuOpen ? "h-full" : ""} ` + className
+      }
     >
       {menuOpen ? (
         <div className={`w-full h-full py-5 flex`}>
