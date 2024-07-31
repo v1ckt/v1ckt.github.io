@@ -10,9 +10,7 @@ interface ProfilePicProps {
 export default function ProfilePic({ size = 2 }: ProfilePicProps) {
   const paddingSize = size / 8;
   const newSize = size - paddingSize;
-  const newSizepx =
-    newSize *
-    parseInt(getComputedStyle(document.body).getPropertyValue("font-size"));
+  const newSizepx = newSize * 16;
 
   return (
     <div
