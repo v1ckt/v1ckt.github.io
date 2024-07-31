@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -18,9 +17,7 @@ export function SquaredIcon({
   size = size || 4;
   const paddingSize = size / 6;
   const newSize = size - paddingSize;
-  const newSizepx =
-    newSize *
-    parseInt(getComputedStyle(document.body).getPropertyValue("font-size"));
+  const newSizepx = newSize * 16;
 
   return (
     <div

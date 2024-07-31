@@ -1,12 +1,13 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export default function ThemeSwitcher() {
-  const [theme, setTheme] = useState(
-    document.documentElement.getAttribute("data-theme")
-  );
+  const [theme, setTheme] = useState("light");
   const isDark = theme === "dark";
+
+  const setDocumentTheme = (theme: string) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  };
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -16,16 +17,14 @@ export default function ThemeSwitcher() {
     const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
     setTheme(initialTheme);
-    document.documentElement.setAttribute("data-theme", initialTheme);
-    localStorage.setItem("theme", initialTheme);
-  }, [isDark]);
+    setDocumentTheme(initialTheme);
+  }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = useCallback(() => {
     const newTheme = isDark ? "light" : "dark";
     setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
+    setDocumentTheme(newTheme);
+  }, [isDark]);
 
   return (
     <label

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { RiCloseFill, RiMenuFill } from "react-icons/ri";
 
@@ -23,9 +21,9 @@ export default function Menu({
     setTitle(page!);
   }, [page]);
 
-  document.querySelector("body")!.style.overflow = `${
-    isOpen ? "hidden" : "auto"
-  }`;
+  useEffect(() => {
+    document.querySelector("body")!.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <div
