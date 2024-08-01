@@ -6,7 +6,7 @@ export default function Footer() {
   const options = [...namedLinks].filter((l) => l.href === "#");
   return (
     <footer className="flex flex-col pt-16 pb-8 px-6 md:px-24 w-full justify-center items-center gap-16 bg-gradient-to-b from-main-bg to-40% to-transparent">
-      <h2 className="text-title">Thanks for comming!</h2>
+      <h2 className="text-title">Thanks for coming!</h2>
       <div className="flex flex-col w-full items-center gap-4">
         <div className="flex flex-row w-full items-start gap-16 md:gap-32">
           <ul className="flex flex-col items-left gap-4">
