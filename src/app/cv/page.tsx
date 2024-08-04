@@ -38,7 +38,7 @@ export default function CV() {
         </div>
         <Button
           title="Save CV"
-          className="hidden md:block print:hidden"
+          className="hidden md:block print:hidden scale-[0.8]"
           onClick={handleSaveAsPDF}
         />
       </header>
