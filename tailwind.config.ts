@@ -14,6 +14,9 @@ const config: Config = {
       dropShadow: {
         "icon": "0px 8px 16px rgba(0, 0, 0, 0.15)",
       },
+      screens: {
+        print: { raw: "print" }
+      }
     },
     colors: {
       "main-bg": "var(--main-bg)",
@@ -33,6 +36,7 @@ const config: Config = {
       "bg-switch-pill": "var(--bg-switch-pill)",
       "header-bg": "var(--header-bg)",
       "menu-bg": "var(--bg-menu)",
+      "card-bg": "var(--card-bg)",
     }
   },
   plugins: [],

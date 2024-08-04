@@ -1,0 +1,114 @@
+{
+    "contact": {
+        "email": "txvicktor@gmail.com",
+        "phone": "(99) 9 9169-6318"
+    },
+    "social": {
+        "linkedin": {
+            "name": "/in/txvkt",
+            "url": "https://www.linkedin.com/in/txvkt/"
+        },
+        "github": {
+            "name": "/v1ckt",
+            "url": "https://www.github.com/v1ckt"
+        },
+        "website":{
+            "name": "v1ckt.github.io",
+            "url": "https://v1ckt.github.io"
+        }
+    },
+    "languages": ["Portuguese - Native", "English - Intermediate"],
+    "skills": {
+        "next": {
+            "name": "Next Js"
+        },
+        "react": {
+            "name": "React Js"
+        },
+        "typescript": {
+            "name": "Typescript"
+        },
+        "sass": {
+            "name": "Sass"
+        },
+        "tailwind": {
+            "name": "Tailwind CSS"
+        },
+        "html": {
+            "name": "HTML"
+        },
+        "css": {
+            "name": "CSS"
+        },
+        "javascript": {
+            "name": "Javascript"
+        },
+        "django": {
+            "name": "Django"
+        },
+        "flutter": {
+            "name": "Flutter"
+        },
+        "dart": {
+            "name": "Dart"
+        }
+    },
+    "tools": {
+        "figma": {
+            "name": "Figma"
+        },
+        "canva": {
+            "name": "Canva"
+        },
+        "adobe-photoshop": {
+            "name": "Adobe Photoshop"
+        },
+        "github": {
+            "name": "Github"
+        },
+        "vs-code": {
+            "name": "VS Code"
+        }
+    },
+    "about": "Front-end Web Developer with a Computer Science degree. Proficient in crafting user interfaces and developing web applications using modern frameworks and technologies. Seeking challenging opportunities to contribute to innovate projects.",
+    "experience": {
+        "title": "Professional Experience",
+        "experiences": {
+            "graphic-design": {
+                "title": "Graphic Designer",
+                "level": "Intern",
+                "company": "Câmara de Dirigentes Lojistas de Caxias",
+                "date": "April 2022 - October 2022",
+                "job": "Developed visual concepts for company social media. Created and edited images for digital and print designs. Managed and updated the company social media."
+            },
+            "ui-ux-designer": {
+                "title": "UI/UX Designer",
+                "level": "Intern",
+                "company": "Norte Sul Tecnologia",
+                "date": "February 2023 - August 2023",
+                "job": "Created wireframes and mockups for web applications."
+            }
+        }
+    },
+    "education": {
+        "title": "Education",
+        "courses": {
+            "computer-science": {
+                "name": "Computer Science",
+                "level": "Bachelor Degree",
+                "institution": "Instituto Federal de Educação, Ciência e Tecnologia do Maranhão - IFMA",
+                "date": "2020 - 2024"
+            }
+        }
+    },
+    "courses": {
+        "title": "Certifications",
+        "courses": {
+            "react": {
+                "name": "Front-end in React Js",
+                "company": "Ada Tech",
+                "date": "2024"
+            }
+        }
+    }
+}

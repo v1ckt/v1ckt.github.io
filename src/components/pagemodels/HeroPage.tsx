@@ -27,9 +27,10 @@ export default function HeroPage({ className }: HeroPageProps) {
   Vicktor Teixeira.`;
   return (
     <section
+    style={{height: "calc(100vh - 4rem)"}}
       className={
         `flex flex-col-reverse items-center justify-evenly
-      md:justify-between h-[100vh] w-full px-6 md:px-24 md:flex-row
+      md:justify-between w-full px-6 md:px-24 md:flex-row
       bg-gradient-to-t from-[transparent] to-70% to-main-bg
       md:bg-gradient-to-r ` + className
       }
@@ -54,7 +55,7 @@ export default function HeroPage({ className }: HeroPageProps) {
               )}&body=${encodeURIComponent(body)}`)
             }
           />
-          <Link href="#">
+          <Link href="/cv">
             <p className="text-xl text-accent">Download CV</p>
           </Link>
         </div>

@@ -16,7 +16,7 @@ export default function Home() {
         }}
       />
       <div className="relative z-1 w-full flex flex-col items-center justify-between">
-        <HeroPage className="md:pt-16" />
+        <HeroPage />
         <StackSection />
         <ProjectSection className="pt-8" />
         <Footer />

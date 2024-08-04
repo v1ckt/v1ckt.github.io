@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header className="z-[100]" />
+        <Header className="z-[100] sticky top-0 left-0" />
         {children}
       </body>
     </html>

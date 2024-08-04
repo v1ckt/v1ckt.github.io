@@ -1,0 +1,24 @@
+import phone from "./phone.png";
+import email from "./email.png";
+import linkedin from "./linkedin.png";
+import github from "./github.png";
+import website from "./website.png";
+import next from "./next.png";
+import react from "./react.png";
+import typescript from "./typescript.png";
+import sass from "./sass.png";
+import tailwind from "./tailwindcss.png";
+import html from "./html.png";
+import css from "./css.png";
+import javascript from "./javascript.png";
+import django from "./django.png";
+import flutter from "./flutter.png";
+import dart from "./dart.png";
+import vscode from "./vscode.png";
+import figma from "./figma.png";
+import photoshop from "./photoshop.png";
+import canva from "./canva.png";
+import us from "./br.png";
+import br from "./us.png";
+
+export { phone, email, linkedin, github, website, next, react, typescript, sass, tailwind, html, css, javascript, django, flutter, dart, vscode, figma, photoshop, canva, br, us };

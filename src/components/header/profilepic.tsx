@@ -12,7 +12,7 @@ export default function ProfilePic({ size = 2 }: ProfilePicProps) {
 
   return (
     <div
-      style={{ padding: `${paddingSize}rem`, width: `${size}rem` }}
+      style={{ padding: `${paddingSize}rem`, width: `${size}rem`, aspectRatio: "1" }}
       className="bg-profile-pic-bg rounded-full"
     >
       <Image

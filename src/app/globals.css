@@ -6,6 +6,7 @@
   font-size: 16px;
   user-select: none;
   -webkit-user-drag: none;
+  list-style: none;
 }
 
 :root {
@@ -42,6 +43,9 @@
 
   /* menu */
   --bg-menu: #ffffff40;
+
+  /* card */
+  --card-bg: #f4f4f4;
 }
 
 [data-theme="dark"] {
@@ -70,7 +74,7 @@
   --otw-text: #3aa757;
 
   /* profile */
-  --profile-pic-bg: #20363d;
+  /* --profile-pic-bg: #20363d; */
 
   /* borders */
   --header-border-color: #2d2d2d;
@@ -80,6 +84,9 @@
 
   /* menu */
   --bg-menu: #111111bf;
+
+  /* card */
+  --card-bg: #232323;
 }
 
 @media (max-width: 768px) {
@@ -113,6 +120,10 @@ h5 {
   @apply text-[1.4rem] md:text-[24px] font-medium leading-[130%] tracking-[-0.04em];
 }
 
+h6 {
+  @apply text-[1.2rem] md:text-[20px] font-medium leading-[130%] tracking-[-0.04em];
+}
+
 p {
   @apply text-base font-medium tracking-[-0.04em];
 }
@@ -137,4 +148,25 @@ p {
   border-radius: 10px;
   border: 2px solid var(--main-bg);
   box-sizing: border-box;
+}
+
+@media print {
+  @layer base {
+    * {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+    }
+
+    .fixed {
+      position: static;
+    }
+
+    .absolute {
+      position: static;
+    }
+
+    .bg-gradient-to-b {
+      background: none;
+    }
+  }
 }
