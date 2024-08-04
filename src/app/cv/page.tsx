@@ -1,12 +1,19 @@
+"use client";
 import Card from "@/components/ui/card";
 import Image from "next/image";
 import { data } from "@/data/cv";
 import Link from "next/link";
 import ProfilePic from "@/components/header/profilepic";
 import { SlArrowLeft } from "react-icons/sl";
+import { Button } from "@/components/ui/button";
 
 export default function CV() {
+  const handleSaveAsPDF = () => {
+    window.print();
+  };
+
   const separator = <li className="w-full h-px bg-[gray] opacity-20" />;
+
   return (
     <div className="z-[200] absolute top-0 left-0 bg-main-bg">
       <header
@@ -15,7 +22,7 @@ export default function CV() {
       >
         <div className="flex flex-row items-center gap-4 text-title">
           <Link href="/">
-            <SlArrowLeft className="text-text size-7" />
+            <SlArrowLeft className="text-text size-7 print:hidden" />
           </Link>
           <div className="flex flex-row items-center justify-center gap-4">
             <ProfilePic size={4} />
@@ -29,6 +36,11 @@ export default function CV() {
             </div>
           </div>
         </div>
+        <Button
+          title="Save CV"
+          className="hidden md:block print:hidden"
+          onClick={handleSaveAsPDF}
+        />
       </header>
       <main className="flex flex-col-reverse md:flex-row items-start justify-center gap-4 w-full h-full text-left px-6 md:px-24 pt-4 pb-4 bg-main-bg">
         <Card className="flex w-full md:w-auto">
