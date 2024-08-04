@@ -56,7 +56,7 @@ export default function HeroPage({ className }: HeroPageProps) {
             }
           />
           <Link href="/cv">
-            <p className="text-xl text-accent">Download CV</p>
+            <p className="text-xl text-accent">View CV</p>
           </Link>
         </div>
       </div>
