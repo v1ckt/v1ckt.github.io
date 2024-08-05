@@ -36,7 +36,9 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-        <p className="">© 2024 Vicktor Teixeira</p>
+        <span className="inline-flex gap-2">
+        <p className="">© 2024 Vicktor Teixeira | Made with Next Js</p>
+        </span>
       </div>
     </footer>
   );
