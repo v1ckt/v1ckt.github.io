@@ -17,7 +17,7 @@ export default function Header({
   return (
     <header
       className={
-        `flex items-center justify-between fixed h-16 w-full px-6 md:px-24 select-none
+        `flex items-center justify-between fixed w-full h-16 px-6 md:px-24 select-none
         border-b-[1px] border-header-border-color backdrop-blur-xl bg-header-bg transition-[height]
         ${menuOpen ? "h-full" : ""} ` + className
       }
