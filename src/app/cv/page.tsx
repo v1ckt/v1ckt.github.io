@@ -12,12 +12,13 @@ export default function CV() {
     window.print();
   };
 
+
   const separator = <li className="w-full h-px bg-[gray] opacity-20" />;
 
   return (
     <div className="z-[200] absolute top-0 left-0 bg-main-bg">
       <header
-        className={`flex z-[999] sticky top-0 left-0 items-center justify-between w-full py-4 px-6 md:px-24 select-none
+        className={`flex z-[999] sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 md:px-24 select-none
         border-b-[1px] border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}
       >
         <div className="flex flex-row items-center gap-4 text-title">
@@ -42,7 +43,7 @@ export default function CV() {
           onClick={handleSaveAsPDF}
         />
       </header>
-      <main className="flex flex-col-reverse md:flex-row items-start justify-center gap-4 w-full h-full text-left px-6 md:px-24 pt-4 pb-4 bg-main-bg">
+      <main className="flex flex-col-reverse print:mt-24 md:flex-row items-start justify-center gap-4 w-full h-full text-left px-6 md:px-24 print:px-4 pt-4 pb-4 bg-main-bg">
         <Card className="flex w-full md:w-auto">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3">
@@ -240,6 +241,9 @@ export default function CV() {
           </div>
         </Card>
       </main>
+      <span className="flex flex-row items-center justify-center pb-4">
+        <p className="">© 2024 Vicktor Teixeira | Made with Next Js</p>
+      </span>
     </div>
   );
 }
