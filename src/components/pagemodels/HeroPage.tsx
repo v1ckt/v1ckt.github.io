@@ -55,7 +55,7 @@ export default function HeroPage({ className }: HeroPageProps) {
               )}&body=${encodeURIComponent(body)}`)
             }
           />
-          <Link href="/cv">
+          <Link href="/cv" className="hover:brightness-[1.2] hover:contrast-[0.8]">
             <p className="text-xl text-accent">View CV</p>
           </Link>
         </div>

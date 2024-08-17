@@ -71,7 +71,7 @@ export default function ProjectCard({
             fontSize="1.125rem"
             className="px-[18px] py-[10px]"
           />
-          {live && <Clink href={live} title="Live Site" className="text-lg" />}
+          {live && <Clink href={live} title="Live Site" className="text-lg hover:brightness-[1.2] hover:contrast-[0.8]" />}
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function Clink({ href, title, className, arrow }: ClinkProps) {
     <Link
       href={href}
       className={
-        `text-accent flex flex-row gap-0.5 items-center ${arrow ? '' : '*:opacity-0 *:hover:opacity-100'} *:hover:translate-x-2 *:transition-all ` +
+        `text-accent hover:brightness-[1.2] hover:contrast-[0.8] flex flex-row gap-0.5 items-center ${arrow ? '' : '*:opacity-0 *:hover:opacity-100'} *:hover:translate-x-2 *:transition-all ` +
         className
       }
     >

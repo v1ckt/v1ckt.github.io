@@ -37,7 +37,7 @@ export function SquaredIcon({
       <div
         className="absolute inset-0 rounded-[22.5%]"
         style={{
-          background: `linear-gradient(180deg, #FFFFFF40 0%, #00000000 100%)`,
+          background: `linear-gradient(180deg, #FFFFFF50 0%, #00000000 100%)`,
         }}
       />
     </div>
