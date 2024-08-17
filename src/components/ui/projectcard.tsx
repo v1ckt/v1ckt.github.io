@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./button";
+import Clink from "./clink";
 
 interface ProjectCardPRops {
   title: string;
@@ -19,7 +20,7 @@ export default function ProjectCard({
   technologies,
   github,
   live,
-  width = "100%",
+  width,
   ltr = false,
 }: ProjectCardPRops) {
   return (
@@ -63,16 +64,14 @@ export default function ProjectCard({
           </div>
         </div>
         {/* buttons */}
-        <div className="flex flex-row-gap-4 items-center justify-left">
+        <div className="flex flex-row-gap-4 items-center justify-left gap-4">
           <Button
             title="Github Repo"
             href={github}
             fontSize="1.125rem"
             className="px-[18px] py-[10px]"
           />
-          {live && (
-            <Button title="Live Site" href={live} fontSize="1.125rem" secondary />
-          )}
+          {live && <Clink href={live} title="Live Site" className="text-lg" />}
         </div>
       </div>
     </div>

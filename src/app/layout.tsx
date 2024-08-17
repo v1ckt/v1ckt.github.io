@@ -19,6 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  const storedTheme = localStorage.getItem('theme');
+                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+                  document.documentElement.setAttribute('data-theme', theme);
+                })();
+              `,
+            }}
+          />
+      </head>
       <body className={inter.className}>
         <Header className="z-[100]" />
         {children}

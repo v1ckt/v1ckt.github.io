@@ -44,7 +44,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       }
     >
       <div className="flex flex-col gap-4 items-end">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
           <h2 className="text-title">Featured Projects</h2>
           <h4>
             For my personal projects, I like to always keep a clean and
@@ -53,9 +53,9 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
             less means more.
           </h4>
         </div>
-        <Clink href="#" title="View more projects" />
+        <Clink href="#" title="View more projects" arrow />
       </div>
-      <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-16">
+      <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-28">
         {projects.map((p, index) => (
           <li key={index} className="">
             <ProjectCard
@@ -65,7 +65,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
               github={p.github}
               live={p.live}
               images={p.images}
-              width={p.technologies.includes("Flutter") ? "45%" : "100%"}
+              width={p.technologies.includes("Flutter") ? "45%" : "50rem"}
               ltr={index % 2 === 0}
             />
           </li>

@@ -7,6 +7,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   secondary?: boolean;
   fontSize?: string;
   className?: string;
+  rightIcon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
 }
 
 export function Button({
@@ -16,6 +18,8 @@ export function Button({
   image,
   fontSize = "text-base",
   className,
+  leftIcon,
+  rightIcon,
   ...props
 }: ButtonProps) {
   return (
@@ -35,7 +39,9 @@ export function Button({
             color: `${secondary ? "var(--accent)" : "white"}`,
           }}
         >
+          {leftIcon}
           {title}
+          {rightIcon}
         </p>
       </a>
     </button>

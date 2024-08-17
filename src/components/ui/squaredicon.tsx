@@ -2,17 +2,19 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface SquaredIconProps {
-  icon: string;
+  icon?: string;
   className?: string;
   size?: number;
   color?: string;
+  children?: React.ReactNode;
 }
 
 export function SquaredIcon({
-  icon: src,
+  icon,
   className,
   size,
   color,
+  children,
 }: SquaredIconProps) {
   size = size || 4;
   const paddingSize = size / 6;
@@ -30,7 +32,8 @@ export function SquaredIcon({
         background: color,
       }}
     >
-      <Image src={src} width={newSizepx} height={newSizepx} alt="icon" />
+      {icon && (<Image src={icon} width={newSizepx} height={newSizepx} alt="icon" />)}
+      {children}
       <div
         className="absolute inset-0 rounded-[22.5%]"
         style={{

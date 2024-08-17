@@ -43,7 +43,7 @@ export default function Menu({
           />
         </>
       ) : (
-        <nav className="flex flex-row items-start justify-between w-full h-full">
+        <nav className="flex flex-row items-start justify-between w-full h-full pr-2">
           <ul className="flex flex-col gap-2 self-start md:self-center cursor-pointer pt-10 md:pt-0">
             {options.map((option, index) => (
               <li className="" key={index}>
@@ -58,7 +58,7 @@ export default function Menu({
             ))}
           </ul>
           <div className="flex flex-row items-center gap-2" onClick={fn}>
-            <p>Close</p>
+            <p className="hidden md:flex">Close</p>
             <RiCloseFill
               className="size-[22px] cursor-pointer"
               style={{ color: "var(--text-title)" }}

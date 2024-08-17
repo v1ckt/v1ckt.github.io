@@ -7,10 +7,10 @@ import resume from "./resume.png"
 const links = [github, linkedin, email, resume, globe];
 
 const namedLinks = [
-    { name: '/v1ckt', data: github, color: '#000', href: 'v1ckt.github.io' },
-    { name: '/in/txvkt', data: linkedin, color: '#0A66C2', href: 'linkedin.com/in/txvkt' },
+    { name: '/v1ckt', data: github, color: '#000', href: 'https://github.com/v1ckt' },
+    { name: '/in/txvkt', data: linkedin, color: '#0A66C2', href: 'https://linkedin.com/in/txvkt' },
     { name: 'txvicktor@gmail.com', data: email, color: '#4FAAFF', href: 'txvicktor@gmail.com' },
-    { name: 'Resume', data: resume, color: '#D99C00', href: '#' },
+    { name: 'Resume', data: resume, color: '#D99C00', href: '/cv' },
     { name: 'English (US)', data: globe, color: '#4FAAFF', href: '#' }
 ]
 
