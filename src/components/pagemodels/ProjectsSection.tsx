@@ -44,7 +44,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       }
     >
       <div className="flex flex-col gap-4 items-end">
-        <div className="flex flex-col gap-4">
+        <article className="flex flex-col gap-4">
           <h2 className="text-title">Featured Projects</h2>
           <h4>
             For my personal projects, I like to always keep a clean and
@@ -52,7 +52,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
             need in a straight way, with no unnecessary distractions. Sometimes
             less means more.
           </h4>
-        </div>
+        </article>
         <Clink href="#" title="View more projects" arrow />
       </div>
       <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-28">

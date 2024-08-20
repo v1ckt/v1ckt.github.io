@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-size: 16px;
+  /* font-size: 16px; */
   user-select: none;
   -webkit-user-drag: none;
   list-style: none;
@@ -11,8 +11,8 @@
 
 :root {
   /* background */
-  --main-bg: #fafafa;
-  --header-bg: #fafafad0;
+  --main-bg: #fefefe;
+  --header-bg: #fefefeD0;
   --bg-pos: right;
 
   /* accent */

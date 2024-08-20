@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        "icon": "0px 8px 24px -4px rgba(0, 0, 0, 0.25)"
+        "icon": "0px 8px 24px -4px rgba(0, 0, 0, 0.2), 0px 4px 8px -2px rgba(0, 0, 0, .1)",
       },
       dropShadow: {
-        "icon": "0px 8px 16px rgba(0, 0, 0, 0.15)",
+        "icon": ["0 14px 16px rgba(0,0,0,0.1)", "0 0 1px rgba(0, 0, 0, 0.1)"],
       },
       screens: {
         print: { raw: "print" }

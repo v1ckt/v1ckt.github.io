@@ -14,7 +14,7 @@ export default function StackSection({ className }: StackSectionProps) {
     bg-gradient-to-b from-[transparent] to-50% to-main-bg ` + className
       }
     >
-      <div className="flex flex-col items-center justify-center w-full gap-4">
+      <article className="flex flex-col items-center justify-center w-full gap-4">
         <h2 className="text-title">My Stack</h2>
         <div className="flex flex-col items-center justify-center gap-12 w-full">
           <h4>These are the technologies I use to develop websites.</h4>
@@ -28,7 +28,7 @@ export default function StackSection({ className }: StackSectionProps) {
             ))}
           </ul>
         </div>
-      </div>
+      </article>
       <Clink href="#" title="All my skills" arrow />
     </section>
   );

@@ -36,7 +36,7 @@ export default function HeroPage({ className }: HeroPageProps) {
       }
     >
       <div className="flex flex-col align-start gap-9">
-        <div className="flex flex-col gap-6 items-center md:items-start">
+        <article className="flex flex-col gap-6 items-center md:items-start">
           <ProfilePic size={6} />
           <div className="flex flex-col gap-2 text-center md:text-start">
             <h1 className="text-title">Hello, I&apos;m Vicktor Teixeira</h1>
@@ -44,8 +44,8 @@ export default function HeroPage({ className }: HeroPageProps) {
               Front-end web developer and computer science bachelor.
             </h3>
           </div>
-        </div>
-        <div className="flex flex-row  justify-center items-center gap-6 md:justify-start">
+        </article>
+        <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
           <Button
             title="Get in touch"
             fontSize="1.25rem"
@@ -58,7 +58,7 @@ export default function HeroPage({ className }: HeroPageProps) {
           <Link href="/cv" className="hover:brightness-[1.2] hover:contrast-[0.8]">
             <p className="text-xl text-accent">View CV</p>
           </Link>
-        </div>
+        </span>
       </div>
       {/* <div className=""></div> */}
       <div className="absolute top-[85vh] flex flex-col items-center gap-2 md:hidden">

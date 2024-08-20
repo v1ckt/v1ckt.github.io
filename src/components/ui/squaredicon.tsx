@@ -22,7 +22,7 @@ export function SquaredIcon({
   const newSizepx = newSize * 16;
 
   return (
-    <div
+    <figure
       className={`flex relative items-center justify-center rounded-[22.5%] shadow-icon
         ${className ? className : ""}`}
       style={{
@@ -37,9 +37,9 @@ export function SquaredIcon({
       <div
         className="absolute inset-0 rounded-[22.5%]"
         style={{
-          background: `linear-gradient(180deg, #FFFFFF50 0%, #00000000 100%)`,
+          background: `linear-gradient(180deg, #FFFFFF58 0%, #00000005 100%)`,
         }}
       />
-    </div>
+    </figure>
   );
 }
