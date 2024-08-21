@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <meta name="google-site-verification" content="loyVs7u4l-uiip0zf_XmC5ObHkJ9_bv8qdWaj0PHfNg" />
+      <link rel="canonical" href="https://v1ckt.github.io" />
       <script
             dangerouslySetInnerHTML={{
               __html: `
