@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import { Button } from "./button";
 import Clink from "./clink";
+import { useState } from "react";
+import { RiCloseFill } from "react-icons/ri";
 
 interface ProjectCardPRops {
   title: string;
@@ -23,6 +26,9 @@ export default function ProjectCard({
   width,
   ltr = false,
 }: ProjectCardPRops) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  document.body.style.overflow = isExpanded ? "hidden" : "auto";
+
   return (
     <div
       className={`flex ${
@@ -39,9 +45,41 @@ export default function ProjectCard({
             height={0}
             sizes="100vw"
             style={{ width: width, height: "auto" }}
-            className="rounded-2xl drop-shadow-icon"
+            className={`rounded-2xl cursor-pointer hover:scale-[1.02] drop-shadow-icon ${
+              isExpanded
+                ? "fixed translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] z-[10] transform scale-[0.6]"
+                : "transition-all"
+            }`}
+            onClick={() => setIsExpanded(!isExpanded)}
           />
         ))}
+        {isExpanded && live! && (
+          <div
+            className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
+          bg-header-bg flex items-center justify-center transition-all"
+          >
+            <div
+              className="fixed w-[70%] h-[90%] transition-alloverflow-hidden
+            flex items-center justify-center flex-col gap-4"
+            >
+              <p className="text-title text-xl">{title}</p>
+              <iframe
+                src={live}
+                className="w-full h-full rounded-2xl border-[1px] border-header-border-color drop-shadow-icon"
+              ></iframe>
+              <span
+                className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b50]"
+                onClick={() => setIsExpanded(!isExpanded)}
+              >
+                <RiCloseFill
+                  className="size-[22px] cursor-pointer"
+                  color="var(--text-title)"
+                />
+                <p className="text-title">Close</p>
+              </span>
+            </div>
+          </div>
+        )}
       </figure>
       <div className="flex flex-col items-left justify-start gap-8 px-0">
         <span className="flex flex-col items-left gap-2">
@@ -71,7 +109,13 @@ export default function ProjectCard({
             fontSize="1.125rem"
             className="px-[18px] py-[10px]"
           />
-          {live && <Clink href={live} title="Live Site" className="text-lg hover:brightness-[1.2] hover:contrast-[0.8]" />}
+          {live && (
+            <Clink
+              href={live}
+              title="Live Site"
+              className="text-lg hover:brightness-[1.2] hover:contrast-[0.8]"
+            />
+          )}
         </div>
       </div>
     </div>

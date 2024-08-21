@@ -18,7 +18,7 @@ import vscode from "./vscode.png";
 import figma from "./figma.png";
 import photoshop from "./photoshop.png";
 import canva from "./canva.png";
-import us from "./br.png";
-import br from "./us.png";
+import us from "./us.png";
+import br from "./br.png";
 
 export { phone, email, linkedin, github, website, next, react, typescript, sass, tailwind, html, css, javascript, django, flutter, dart, vscode, figma, photoshop, canva, br, us };
