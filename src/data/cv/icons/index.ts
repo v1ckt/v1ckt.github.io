@@ -20,5 +20,6 @@ import photoshop from "./photoshop.png";
 import canva from "./canva.png";
 import us from "./us.png";
 import br from "./br.png";
+import location from "./address.png"
 
-export { phone, email, linkedin, github, website, next, react, typescript, sass, tailwind, html, css, javascript, django, flutter, dart, vscode, figma, photoshop, canva, br, us };
+export { location, phone, email, linkedin, github, website, next, react, typescript, sass, tailwind, html, css, javascript, django, flutter, dart, vscode, figma, photoshop, canva, br, us };

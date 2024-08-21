@@ -44,14 +44,14 @@ export default function CV() {
         />
       </header>
       <main className="flex flex-col-reverse print:mt-24 md:flex-row items-start justify-center gap-4 w-full h-full text-left px-6 md:px-24 print:px-4 pt-4 pb-4 bg-main-bg">
-        <Card className="flex w-full md:w-auto">
+        <Card className="flex max-w-[360px] md:w-auto">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3">
               <h6 className="text-title">Contact</h6>
               <ul className="flex flex-col gap-2">
                 {Object.entries(data.contact).map(([key, value]) => (
                   <li key={key}>
-                    <span className="inline-flex gap-2">
+                    <span className="inline-flex gap-2 items-start">
                       <Image
                         src={value.icon}
                         width={24}

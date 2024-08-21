@@ -7,6 +7,10 @@ export const data = {
     phone: {
       name: "(99) 9 9169-6318",
       icon: icon.phone
+    },
+    address: {
+      name: `Rua Vinícius de Moraes, 313 Liberdade II - Parauapebas, Brazil`,
+      icon: icon.location
     }
   },
     social: {
