@@ -51,13 +51,15 @@ export default function ProjectCard({
                   : ""
               }`}
             />
-            <p
-              onClick={live ? () => setIsExpanded(!isExpanded) : undefined}
-              className="absolute bottom-[5%] left-[50%] translate-x-[-50%] hover:z-[1] cursor-pointer
+            {live && (
+              <p
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="absolute bottom-[5%] left-[50%] translate-x-[-50%] hover:z-[1] cursor-pointer
             bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all"
-            >
-              Click to preview
-            </p>
+              >
+                Click to preview
+              </p>
+            )}
           </>
         ))}
         {isExpanded && live! && (
