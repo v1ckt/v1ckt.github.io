@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Vicktor Teixeira - Dev",
   description: "Vicktor Teixeira Developer Portfolio",
   authors: [{ name: "Vicktor Teixeira", url: "github.com/v1ckt" }],
-  keywords: ["Vicktor Teixeira", "Developer", "Portfolio", "Vicktor"]
+  keywords: ["Vicktor Teixeira", "Developer", "Portfolio", "Vicktor"],
 };
 
 export default function RootLayout({
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta name="google-site-verification" content="loyVs7u4l-uiip0zf_XmC5ObHkJ9_bv8qdWaj0PHfNg" />
       <script
             dangerouslySetInnerHTML={{
               __html: `
