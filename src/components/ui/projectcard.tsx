@@ -27,7 +27,7 @@ export default function ProjectCard({
   ltr = false,
 }: ProjectCardPRops) {
   const [isExpanded, setIsExpanded] = useState(false);
-  document.body.style.overflow = isExpanded ? "hidden" : "auto";
+  // document.body.style.overflow = isExpanded ? "hidden" : "auto";
 
   return (
     <div
