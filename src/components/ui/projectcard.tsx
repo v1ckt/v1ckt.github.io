@@ -36,21 +36,29 @@ export default function ProjectCard({
     >
       <figure className="flex flex-row items-center justify-center relative w-full h-full">
         {images.map((image, index) => (
-          <Image
-            onClick={live ? () => setIsExpanded(!isExpanded) : undefined}
-            key={index}
-            src={image}
-            alt={title}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: width, height: "auto" }}
-            className={`rounded-2xl drop-shadow-icon ${
-              isExpanded
-                ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z-[10] transform"
-                : ""
-            } ${live ? "cursor-pointer" : ""}`}
-          />
+          <>
+            <Image
+              key={index}
+              src={image}
+              alt={title}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: width, height: "auto" }}
+              className={`rounded-2xl drop-shadow-icon z-[1] hover:z-[0] overflow-hidden ${
+                isExpanded
+                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z-[10] transform"
+                  : ""
+              }`}
+            />
+            <p
+              onClick={live ? () => setIsExpanded(!isExpanded) : undefined}
+              className="absolute bottom-[5%] left-[50%] translate-x-[-50%] hover:z-[1] cursor-pointer
+            bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all"
+            >
+              Click to preview
+            </p>
+          </>
         ))}
         {isExpanded && live! && (
           <div
@@ -58,14 +66,18 @@ export default function ProjectCard({
           bg-header-bg flex items-center justify-center transition-all"
           >
             <div
-              className="fixed w-[70%] h-[90%] transition-alloverflow-hidden
+              className="fixed w-[90%] h-[70%] md:w-[70%] md:h-[95%] transition-all
             flex items-center justify-center flex-col gap-4"
             >
-              <p className="text-title text-xl">{title}</p>
+              <p className="text-text text-xl font-semibold">{title}</p>
               <iframe
                 src={live}
-                className="w-full h-full rounded-2xl border-[1px] border-header-border-color drop-shadow-icon bg-main-bg"
-              ></iframe>
+                title={title + ` Live Preview`}
+                sandbox="allow-scripts allow-same-origin"
+                className="border-[1px] border-header-border-color drop-shadow-icon bg-main-bg rounded-2xl"
+                width={"100%"}
+                height={"100%"}
+              />
               <span
                 className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b50]"
                 onClick={() => setIsExpanded(!isExpanded)}

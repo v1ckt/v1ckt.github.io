@@ -23,7 +23,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
         "This is an Event Management System, a comprehensive solution designed for a nightclub. Its primary focus is on enabling event organizers to seamlessly add, update, list, and delete upcoming events.",
       technologies: ["HTML", "CSS", "PHP", "Laravel", "MySQL"],
       github: "https://github.com/v1ckt/BoateAzul",
-      live: null,
+      live: "https://v1ckt.github.io/BoateAzulFirstLook/",
       images: [BoateAzul.src],
     },
     {
