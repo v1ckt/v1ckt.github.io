@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <div
-        className="absolute inset-0 z-0 transition-all"
+        className="absolute inset-0 z-0 transition-none"
         style={{
           backgroundImage: "url('/static/images/bg.svg')",
           backgroundSize: "61rem",

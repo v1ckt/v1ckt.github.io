@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 export default function ThemeSwitcher() {
   const [theme, setTheme] = useState("light");
@@ -30,7 +31,7 @@ export default function ThemeSwitcher() {
     <label
       htmlFor="switch"
       className="w-[2rem] h-[1.125rem] bg-accent-muted p-[1px] rounded-full flex row justify-start
-                 duration-200 cursor-pointer"
+                 duration-200 cursor-pointer overflow-hidden"
     >
       <input
         type="checkbox"
@@ -40,11 +41,25 @@ export default function ThemeSwitcher() {
         onChange={toggleTheme}
         checked={isDark}
       />
-      <div
-        className={`h-full aspect-square rounded-full bg-bg-switch-pill transition ${
+      <figure
+        className={`h-full flex items-center justify-center aspect-square shadow-md rounded-full bg-bg-switch-pill transition ${
           isDark ? "transform translate-x-3.5" : ""
         }`}
-      />
+      >
+        <Image
+          src={
+            isDark
+              ? "/static/images/switchIcons/moon.svg"
+              : "/static/images/switchIcons/sun.svg"
+          }
+          width={10}
+          height={10}
+          alt="switch mode icon"
+          className={`${
+            isDark ? "rotate-0" : "rotate-180"
+          } brightness-50 duration-[250ms]`}
+        />
+      </figure>
     </label>
   );
 }

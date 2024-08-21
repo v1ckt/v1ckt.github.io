@@ -23,8 +23,8 @@ export function SquaredIcon({
 
   return (
     <figure
-      className={`flex relative items-center justify-center rounded-[22.5%] shadow-icon
-        ${className ? className : ""}`}
+      className={`flex relative items-center justify-center
+        rounded-[22.5%] shadow-icon ${className ? className : ""}`}
       style={{
         padding: `${paddingSize}rem`,
         width: `${size}rem`,
@@ -32,12 +32,15 @@ export function SquaredIcon({
         background: color,
       }}
     >
-      {icon && (<Image src={icon} width={newSizepx} height={newSizepx} alt="icon" />)}
+      {icon && (
+        <Image src={icon} width={newSizepx} height={newSizepx} alt="icon" />
+      )}
       {children}
       <div
         className="absolute inset-0 rounded-[22.5%]"
         style={{
-          background: `linear-gradient(180deg, #FFFFFF58 0%, #00000005 100%)`,
+          background: `linear-gradient(180deg, #FFFFFF80 0%, #00000020 100%)`,
+          mixBlendMode: "overlay",
         }}
       />
     </figure>
