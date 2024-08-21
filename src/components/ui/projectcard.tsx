@@ -27,7 +27,6 @@ export default function ProjectCard({
   ltr = false,
 }: ProjectCardPRops) {
   const [isExpanded, setIsExpanded] = useState(false);
-  // document.body.style.overflow = isExpanded ? "hidden" : "auto";
 
   return (
     <div
@@ -38,6 +37,7 @@ export default function ProjectCard({
       <figure className="flex flex-row items-center justify-center relative w-full h-full">
         {images.map((image, index) => (
           <Image
+            onClick={live ? () => setIsExpanded(!isExpanded) : undefined}
             key={index}
             src={image}
             alt={title}
@@ -45,12 +45,11 @@ export default function ProjectCard({
             height={0}
             sizes="100vw"
             style={{ width: width, height: "auto" }}
-            className={`rounded-2xl cursor-pointer hover:scale-[1.02] drop-shadow-icon ${
+            className={`rounded-2xl drop-shadow-icon ${
               isExpanded
-                ? "fixed translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%] z-[10] transform scale-[0.6]"
-                : "transition-all"
-            }`}
-            onClick={() => setIsExpanded(!isExpanded)}
+                ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z-[10] transform"
+                : ""
+            } ${live ? "cursor-pointer" : ""}`}
           />
         ))}
         {isExpanded && live! && (
@@ -65,7 +64,7 @@ export default function ProjectCard({
               <p className="text-title text-xl">{title}</p>
               <iframe
                 src={live}
-                className="w-full h-full rounded-2xl border-[1px] border-header-border-color drop-shadow-icon"
+                className="w-full h-full rounded-2xl border-[1px] border-header-border-color drop-shadow-icon bg-main-bg"
               ></iframe>
               <span
                 className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b50]"
