@@ -48,6 +48,7 @@ export default function HeroPage({ className }: HeroPageProps) {
         </article>
         <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
           <Button
+            data-nosnippet
             className="group overflow-hidden relative"
             fontSize="1.25rem"
             onClick={() =>
@@ -60,7 +61,7 @@ export default function HeroPage({ className }: HeroPageProps) {
               <IoIosMail />
               <IoIosArrowForward className="text-base" />
             </span>
-            <p className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200">
+            <p className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200" data-nosnippet>
               Get in touch
             </p>
           </Button>
@@ -74,7 +75,7 @@ export default function HeroPage({ className }: HeroPageProps) {
       </div>
       {/* <div className=""></div> */}
       <div className="absolute top-[85vh] flex flex-col items-center gap-2 md:hidden">
-        <p>Scroll down</p>
+        <p data-nosnippet>Scroll down</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="animate-bounce h-6 w-6"
