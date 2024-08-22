@@ -27,6 +27,7 @@ export default function RootLayout({
         />
         <meta name="description" content={metadata.description!} />
         <link rel="canonical" href="https://v1ckt.github.io" />
+        <link rel="icon" href="./favicon.ico" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
