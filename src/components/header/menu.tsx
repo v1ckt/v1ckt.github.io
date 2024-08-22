@@ -33,7 +33,7 @@ export default function Menu({
     >
       {!isOpen ? (
         <>
-          <p onClick={fn} className="font-normal hidden md:flex">
+          <p onClick={fn} className="font-normal hidden md:flex cursor-pointer">
             {title}
           </p>
           <RiMenuFill
@@ -58,7 +58,7 @@ export default function Menu({
             ))}
           </ul>
           <div className="flex flex-row items-center gap-2" onClick={fn}>
-            <p className="hidden md:flex">Close</p>
+            <p className="hidden md:flex cursor-pointer">Close</p>
             <RiCloseFill
               className="size-[22px] cursor-pointer"
               style={{ color: "var(--text-title)" }}

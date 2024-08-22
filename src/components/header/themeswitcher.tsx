@@ -31,7 +31,7 @@ export default function ThemeSwitcher() {
     <label
       htmlFor="switch"
       className="w-[2rem] h-[1.125rem] bg-accent-muted p-[1px] rounded-full flex row justify-start
-                 duration-200 cursor-pointer overflow-hidden"
+                 duration-200 cursor-pointer overflow-hidden group"
     >
       <input
         type="checkbox"
@@ -55,9 +55,9 @@ export default function ThemeSwitcher() {
           width={10}
           height={10}
           alt="switch mode icon"
-          className={`${
-            isDark ? "rotate-0" : "rotate-180"
-          } brightness-50 duration-[250ms]`}
+          className={`group-hover:rotate-[35deg]
+            ${isDark ? "rotate-0" : "rotate-180"}
+            brightness-50 duration-[250ms]`}
         />
       </figure>
     </label>

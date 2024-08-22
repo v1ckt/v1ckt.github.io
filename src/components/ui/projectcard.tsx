@@ -34,7 +34,7 @@ export default function ProjectCard({
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
       } items-center justify-between gap-10 md:gap-16`}
     >
-      <figure className="flex flex-row items-center justify-center relative w-full h-full">
+      <figure className="flex flex-row items-center justify-center relative w-full h-full group overflow-hidden">
         {images.map((image, index) => (
           <>
             <Image
@@ -45,19 +45,18 @@ export default function ProjectCard({
               height={0}
               sizes="100vw"
               style={{ width: width, height: "auto" }}
-              className={`rounded-2xl drop-shadow-icon z-[1] hover:z-[0] overflow-hidden ${
+              className={`rounded-2xl drop-shadow-icon overflow-hidden ${
                 isExpanded
-                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z-[10] transform"
+                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8]"
                   : ""
               }`}
             />
             {live && (
               <p
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="absolute bottom-[5%] left-[50%] translate-x-[-50%] hover:z-[1] cursor-pointer
-            bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all"
+                className="absolute -bottom-10 group-hover:bottom-[5%] left-[50%] translate-x-[-50%] cursor-pointer bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all shadow-icon"
               >
-                Click to preview
+                Click here to preview
               </p>
             )}
           </>
@@ -65,7 +64,7 @@ export default function ProjectCard({
         {isExpanded && live! && (
           <div
             className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
-          bg-header-bg flex items-center justify-center transition-all"
+          bg-header-bg flex items-center justify-center"
           >
             <div
               className="fixed w-[90%] h-[70%] md:w-[70%] md:h-[95%] transition-all
@@ -81,14 +80,14 @@ export default function ProjectCard({
                 height={"100%"}
               />
               <span
-                className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b50]"
+                className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all pr-3.5"
                 onClick={() => setIsExpanded(!isExpanded)}
               >
                 <RiCloseFill
                   className="size-[22px] cursor-pointer"
                   color="var(--text-title)"
                 />
-                <p className="text-title">Close</p>
+                <p className="text-text">Close</p>
               </span>
             </div>
           </div>

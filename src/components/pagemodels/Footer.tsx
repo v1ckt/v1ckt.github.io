@@ -14,9 +14,9 @@ export default function Footer() {
               <p className="text-title font-bold opacity-80">Contact/Social</p>
             </li>
             {links.map((l, index) => (
-              <li key={index}>
-                <a href={l.href} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2">
-                  <SquaredIcon icon={l.data.src} size={2} color={l.color} />
+              <li key={index} className="group">
+                <a href={l.href} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2 transition-all group-hover:text-title">
+                  <SquaredIcon icon={l.data.src} size={2} color={l.color}/>
                   <p>{l.name}</p>
                 </a>
               </li>
@@ -27,9 +27,9 @@ export default function Footer() {
               <p className="text-title font-bold opacity-80">Options</p>
             </li>
             {options.map((l, index) => (
-              <li key={index}>
-                <a href={l.href} className="flex flex-row items-center gap-2">
-                  <SquaredIcon icon={l.data.src} size={2} color={l.color} />
+              <li key={index} className="group">
+                <a href={l.href} className="flex flex-row items-center gap-2 transition-all group-hover:text-title">
+                  <SquaredIcon icon={l.data.src} size={2} color={l.color}/>
                   <p>{l.name}</p>
                 </a>
               </li>

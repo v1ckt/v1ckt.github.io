@@ -2,6 +2,7 @@
 import Link from "next/link";
 import ProfilePic from "../header/profilepic";
 import { Button } from "../ui/button";
+import { IoIosArrowForward, IoIosMail } from "react-icons/io";
 
 interface HeroPageProps {
   className?: string;
@@ -47,15 +48,26 @@ export default function HeroPage({ className }: HeroPageProps) {
         </article>
         <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
           <Button
-            title="Get in touch"
+            className="group overflow-hidden relative"
             fontSize="1.25rem"
             onClick={() =>
               (window.location.href = `mailto:${email}?subject=${encodeURIComponent(
                 subject
               )}&body=${encodeURIComponent(body)}`)
             }
-          />
-          <Link href="/cv" className="hover:brightness-[1.2] hover:contrast-[0.8]">
+          >
+            <span className="inline-flex items-center justify-center absolute text-2xl -left-10 group-hover:translate-x-10 group-hover:w-full transition-all duration-200">
+              <IoIosMail />
+              <IoIosArrowForward className="text-base" />
+            </span>
+            <p className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200">
+              Get in touch
+            </p>
+          </Button>
+          <Link
+            href="/cv"
+            className="hover:brightness-[1.2] hover:contrast-[0.8]"
+          >
             <p className="text-xl text-accent">View CV</p>
           </Link>
         </span>

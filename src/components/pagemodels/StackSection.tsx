@@ -20,9 +20,8 @@ export default function StackSection({ className }: StackSectionProps) {
           <h4>These are the technologies I use to develop websites.</h4>
           <ul className="flex flex-row gap-6 w-full justify-center md:justify-around items-center flex-wrap">
             {namedStack.map((ic, index) => (
-              <li key={index}>
+              <li key={index} className="flex-col items-center justify-center transition-all">
                 <SquaredIcon size={7} color={ic.color} icon={ic.data.src}>
-                  {/* {ic.children} */}
                 </SquaredIcon>
               </li>
             ))}

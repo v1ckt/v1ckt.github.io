@@ -16,7 +16,7 @@ const namedStack = [
     { name: 'TypeScript', data: typescript, color: '#1976D2' },
     { name: 'React', data: react, color: "#0DB6DB" },
     { name: 'SASS', data: sass, color: '#F06292' },
-    { name: 'TailwindCSS', data: tailwindcss, color: '#00ACC1'},
+    { name: 'Tailwind CSS', data: tailwindcss, color: '#00ACC1'},
 ]
 
 export default stack;

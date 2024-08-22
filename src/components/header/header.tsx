@@ -36,6 +36,10 @@ export default function Header({
           <div className="flex items-center gap-4 text-title">
             <Profile />
             <ThemeSwitcher />
+            <div className="text-text bg-[gray] bg-opacity-10 px-2.5 py-1 cursor-help rounded-full group">
+              <p className="text-xs group-hover:hidden">Beta</p>
+              <p className="text-xs hidden group-hover:flex">This website is under development</p>
+            </div>
           </div>
           <nav className="flex items-center gap-4">
             <WorkStatus />
