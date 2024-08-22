@@ -34,7 +34,11 @@ export default function ProjectCard({
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
       } items-center justify-between gap-10 md:gap-16`}
     >
-      <figure className="flex flex-row items-center justify-center relative w-full h-full group overflow-hidden">
+      <figure
+        className={`flex flex-row items-center justify-center relative w-full h-full group rounded-2xl ${
+          width !== "45%" ? "shadow-window" : "drop-shadow-window"
+        } overflow-hidden`}
+      >
         {images.map((image, index) => (
           <>
             <Image
@@ -45,7 +49,7 @@ export default function ProjectCard({
               height={0}
               sizes="100vw"
               style={{ width: width, height: "auto" }}
-              className={`rounded-2xl drop-shadow-icon overflow-hidden ${
+              className={`${
                 isExpanded
                   ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8]"
                   : ""
@@ -75,7 +79,7 @@ export default function ProjectCard({
                 src={live}
                 title={title + ` Live Preview`}
                 sandbox="allow-scripts allow-same-origin"
-                className="border-[1px] border-header-border-color drop-shadow-icon bg-main-bg rounded-2xl"
+                className="border-[1px] border-header-border-color shadow-window bg-main-bg rounded-2xl"
                 width={"100%"}
                 height={"100%"}
               />
