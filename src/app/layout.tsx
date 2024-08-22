@@ -25,7 +25,6 @@ export default function RootLayout({
           name="google-site-verification"
           content="loyVs7u4l-uiip0zf_XmC5ObHkJ9_bv8qdWaj0PHfNg"
         />
-        <meta name="description" content={metadata.description!} />
         <link rel="canonical" href="https://v1ckt.github.io" />
         <link rel="icon" href="./favicon.ico" />
         <script
