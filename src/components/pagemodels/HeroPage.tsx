@@ -42,7 +42,7 @@ export default function HeroPage({ className }: HeroPageProps) {
           <div className="flex flex-col gap-2 text-center md:text-start">
             <h1 className="text-title">Hello, I&apos;m Vicktor Teixeira</h1>
             <h3 className="lg:max-w-[50vmax]">
-              Front-end web developer and computer science bachelor.
+              Frontend engineer and computer science bachelor.
             </h3>
           </div>
         </article>

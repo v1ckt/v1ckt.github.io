@@ -32,7 +32,7 @@ export default function CV() {
                 Vicktor Emannoel Pereira Teixeira
               </p>
               <p className="md:text-xl text-text font-semibold">
-                Computer Science Bachelor and Front-end Web Developer
+                Computer Science Bachelor and Frontend Engineer
               </p>
             </div>
           </div>
