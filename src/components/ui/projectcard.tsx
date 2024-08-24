@@ -40,7 +40,7 @@ export default function ProjectCard({
         } overflow-hidden`}
       >
         {images.map((image, index) => (
-          <div key={index} style={{width: "auto", height: "auto"}}>
+          <div key={index} style={{width: "auto", height: "auto"}} className="flex justify-center">
             <Image
               src={image}
               alt={title}
