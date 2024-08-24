@@ -6,7 +6,6 @@ import Link from "next/link";
 import ProfilePic from "@/components/header/profilepic";
 import { SlArrowLeft } from "react-icons/sl";
 import { Button } from "@/components/ui/button";
-import { CursorTracker } from "@/components/ui/cursortracker";
 
 export default function CV() {
   const handleSaveAsPDF = () => {
@@ -245,7 +244,6 @@ export default function CV() {
       <span className="flex flex-row items-center justify-center pb-4">
         <p className="">© 2024 Vicktor Teixeira | Made with Next Js</p>
       </span>
-      <CursorTracker />
     </div>
   );
 }
