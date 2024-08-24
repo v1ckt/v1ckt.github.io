@@ -40,15 +40,14 @@ export default function ProjectCard({
         } overflow-hidden`}
       >
         {images.map((image, index) => (
-          <>
+          <div key={index} style={{width: "auto", height: "auto"}}>
             <Image
-              key={index}
               src={image}
               alt={title}
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: width, height: "auto" }}
+              style={{ width: "auto", height: "auto" }}
               className={`${
                 isExpanded
                   ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8]"
@@ -58,12 +57,12 @@ export default function ProjectCard({
             {live && (
               <p
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="absolute -bottom-10 group-hover:bottom-[5%] left-[50%] translate-x-[-50%] cursor-pointer bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all shadow-icon"
+                className="absolute hidden md:flex w-max -bottom-10 group-hover:bottom-[5%] left-[50%] translate-x-[-50%] cursor-pointer bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all shadow-icon"
               >
                 Click here to preview
               </p>
             )}
-          </>
+          </div>
         ))}
         {isExpanded && live! && (
           <div

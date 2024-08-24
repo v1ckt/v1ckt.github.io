@@ -1,3 +1,4 @@
+import { BiBorderAll } from "react-icons/bi";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -38,7 +39,22 @@ const config: Config = {
       "header-bg": "var(--header-bg)",
       "menu-bg": "var(--bg-menu)",
       "card-bg": "var(--card-bg)",
-    }
+    },
+    keyframes: {
+      cursorPointer: {
+        "0%, 100%": {
+          width: "1.5rem",
+          height: "1.5rem",
+        },
+        "50%": {
+          width: ".5rem",
+          height: ".5rem",
+        },
+      }
+    },
+    animation: {
+      cursorPointer: 'cursorPointer 1s infinite',
+    },
   },
   plugins: [],
 };
