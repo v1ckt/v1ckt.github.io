@@ -1,6 +1,4 @@
-import { CursorTracker } from "@/components/ui/cursortracker";
 import Link from "next/link";
-import { BiExclude } from "react-icons/bi";
 
 export default function Custom404() {
   return (
@@ -37,7 +35,6 @@ export default function Custom404() {
         </Link>
         .
       </h4>
-      <CursorTracker />
     </div>
   );
 }
