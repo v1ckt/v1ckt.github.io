@@ -36,7 +36,7 @@ export default function ProjectCard({
     >
       <figure
         className={`flex flex-row items-center justify-center relative w-full h-full group rounded-2xl ${
-          width !== "100%" ? "shadow-window" : "drop-shadow-window"
+          width === "50rem" ? "shadow-window" : "drop-shadow-window"
         } overflow-hidden`}
       >
         {images.map((image, index) => (

@@ -65,7 +65,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
               github={p.github}
               live={p.live}
               images={p.images}
-              width={p.technologies.includes("Flutter") ? "38%" : "50rem"}
+              width={p.technologies.includes("Flutter") ? "60%" : "50rem"}
               ltr={index % 2 === 0}
             />
           </li>
