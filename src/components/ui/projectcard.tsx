@@ -36,7 +36,7 @@ export default function ProjectCard({
     >
       <figure
         className={`flex flex-row items-center justify-center relative w-full h-full group rounded-2xl ${
-          width !== "45%" ? "shadow-window" : "drop-shadow-window"
+          width !== "100%" ? "shadow-window" : "drop-shadow-window"
         } overflow-hidden`}
       >
         {images.map((image, index) => (
@@ -47,7 +47,7 @@ export default function ProjectCard({
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "auto", height: "auto" }}
+              style={{ width: width, height: "auto" }}
               className={`${
                 isExpanded
                   ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8]"
