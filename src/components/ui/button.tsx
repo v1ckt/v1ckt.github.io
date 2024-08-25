@@ -28,7 +28,7 @@ export function Button({
     <button
       {...props}
       className={
-        `flex flex-row px-7 py-3 ${
+        `flex flex-row px-5 py-2 ${
           secondary ? "bg-transparent" : "bg-accent"
         } rounded-full hover:brightness-[1.2] hover:contrast-[0.8] ` + className
       }

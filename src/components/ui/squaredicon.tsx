@@ -24,7 +24,7 @@ export function SquaredIcon({
   return (
     <figure
       className={`flex relative items-center justify-center
-        rounded-[22.5%] shadow-icon ${className ? className : ""}`}
+        rounded-[22.5%] shadow-icon ${className}`}
       style={{
         padding: `${paddingSize}rem`,
         width: `${size}rem`,

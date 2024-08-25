@@ -55,7 +55,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
         </article>
             <Clink href="#" title="View more projects" arrow />
       </div>
-      <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-28">
+      <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-160">
         {projects.map((p, index) => (
           <li key={index} className="">
             <ProjectCard
@@ -65,7 +65,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
               github={p.github}
               live={p.live}
               images={p.images}
-              width={p.technologies.includes("Flutter") ? "60%" : "50rem"}
+              width={p.technologies.includes("Flutter") ? "75%" : "50rem"}
               ltr={index % 2 === 0}
             />
           </li>

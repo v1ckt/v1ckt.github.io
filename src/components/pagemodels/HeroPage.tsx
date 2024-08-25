@@ -3,6 +3,7 @@ import Link from "next/link";
 import ProfilePic from "../header/profilepic";
 import { Button } from "../ui/button";
 import { IoIosArrowForward, IoIosMail } from "react-icons/io";
+import Clink from "../ui/clink";
 
 interface HeroPageProps {
   className?: string;
@@ -36,12 +37,12 @@ export default function HeroPage({ className }: HeroPageProps) {
       md:bg-gradient-to-r ` + className
       }
     >
-      <div className="flex flex-col align-start gap-9">
+      <div className="flex flex-col align-start gap-6">
         <article className="flex flex-col gap-6 items-center md:items-start">
           <ProfilePic size={6} />
-          <div className="flex flex-col gap-2 text-center md:text-start">
+          <div className="flex flex-col gap-2 text-center md:text-start md:max-w-prose">
             <h1 className="text-title">Hello, I&apos;m Vicktor Teixeira</h1>
-            <h2 className="lg:max-w-[50vmax]">
+            <h2 className="font-semibold">
               Frontend engineer and computer science bachelor.
             </h2>
           </div>
@@ -49,7 +50,7 @@ export default function HeroPage({ className }: HeroPageProps) {
         <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
           <Button
             data-nosnippet
-            className="group overflow-hidden relative"
+            className="group overflow-hidden relative px-7 py-3"
             fontSize="1.25rem"
             onClick={() =>
               (window.location.href = `mailto:${email}?subject=${encodeURIComponent(
@@ -61,16 +62,18 @@ export default function HeroPage({ className }: HeroPageProps) {
               <IoIosMail />
               <IoIosArrowForward className="text-base" />
             </span>
-            <p className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200" data-nosnippet>
+            <p
+              className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200"
+              data-nosnippet
+            >
               Get in touch
             </p>
           </Button>
-          <Link
+          <Clink
             href="/cv"
-            className="hover:brightness-[1.2] hover:contrast-[0.8]"
-          >
-            <p className="text-xl text-accent">View CV</p>
-          </Link>
+            className="hover:brightness-[1.2] hover:contrast-[0.8] text-xl"
+            title="View my CV"
+          />
         </span>
       </div>
       {/* <div className=""></div> */}

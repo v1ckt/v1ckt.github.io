@@ -40,7 +40,11 @@ export default function ProjectCard({
         } overflow-hidden`}
       >
         {images.map((image, index) => (
-          <div key={index} style={{width: "auto", height: "auto"}} className="flex justify-center">
+          <div
+            key={index}
+            style={{ width: "auto", height: "auto" }}
+            className="flex justify-center"
+          >
             <Image
               src={image}
               alt={title}
@@ -96,34 +100,29 @@ export default function ProjectCard({
           </div>
         )}
       </figure>
-      <div className="flex flex-col items-left justify-start gap-8 px-0">
-        <span className="flex flex-col items-left gap-2">
+      <div className="flex flex-col items-left justify-start gap-6 px-0">
+        <span className="flex flex-col items-left gap-4">
           {/* text-title */}
           <article className="flex flex-col gap-3 max-w-screen-lg">
-            <h2 className="text-title">{title}</h2>
+            <h3 className="text-title font-bold">{title}</h3>
             <h4 className="text-text">{description}</h4>
           </article>
           {/* markers */}
-          <span className="flex flex-row gap-2 items-left justify-left items-center">
+          <span className="flex flex-row gap-2.5 items-left justify-left items-center">
             {/* markers */}
             {technologies.map((t, index) => (
               <div
                 className="bg-project-marker px-4 py-1 text-marker-text rounded-full"
                 key={index}
               >
-                <p className="font-semibold text-sm">{t}</p>
+                <p className="font-semibold text-base md:text-sm">{t}</p>
               </div>
             ))}
           </span>
         </span>
         {/* buttons */}
         <div className="flex flex-row-gap-4 items-center justify-left gap-4">
-          <Button
-            title="Github Repo"
-            href={github}
-            fontSize="1.125rem"
-            className="px-[18px] py-[10px]"
-          />
+          <Button title="Github Repo" href={github} fontSize="1.125rem" />
           {live && (
             <Clink
               href={live}

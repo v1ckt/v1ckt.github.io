@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,13 +22,32 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@images/*": ["./public/static/images/*"],
-      "@public/*": ["./public/*"],
-      "@assets/*" : ["./src/assets/*"],
-      "@components/*": ["./src/components/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@images/*": [
+        "./public/static/images/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/pages/404/page.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/pages/404/page.tsx",
+    "out/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

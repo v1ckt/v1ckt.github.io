@@ -21,7 +21,7 @@ export default function StackSection({ className }: StackSectionProps) {
           <ul className="flex flex-row gap-6 w-full justify-center md:justify-around items-center flex-wrap">
             {namedStack.map((ic, index) => (
               <li key={index} className="flex-col items-center justify-center transition-all">
-                <SquaredIcon size={7} color={ic.color} icon={ic.data.src}>
+                <SquaredIcon size={7} color={ic.color} icon={ic.data.src} className="scale-[.9] md:scale-100">
                 </SquaredIcon>
               </li>
             ))}

@@ -13,7 +13,7 @@
   /* background */
   --main-bg: #fefefe;
   --header-bg: #fefefeD0;
-  --bg-pos: right;
+  --bg-pos: top;
 
   /* accent */
   --accent: #2086e3;
@@ -107,12 +107,12 @@ h1 {
 
 h2 {
   /* @apply text-[2rem] md:text-5xl font-bold leading-[130%] tracking-[-0.04em]; */
-  @apply text-[2rem] md:text-4xl font-semibold leading-[130%] tracking-[-0.04em];
+  @apply text-[2rem] md:text-4xl font-bold leading-[130%] tracking-[-0.04em];
 }
 
 h3 {
   /* @apply text-[1.8rem] md:text-4xl font-semibold leading-[120%] tracking-[-0.04em]; */
-  @apply text-[1.8rem] md:text-3xl font-semibold leading-[120%] tracking-[-0.04em];
+  @apply text-[1.8rem] md:text-3xl font-medium leading-[120%] tracking-[-0.04em];
 }
 
 h4 {
