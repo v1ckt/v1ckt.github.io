@@ -31,7 +31,7 @@ export default function Custom404() {
       <h4 className="text-text">
         It seems that the page you&apos;re looking for can&apos;t be found.
         <br className="hidden md:flex" /> Please, consider going back to{" "}
-        <Link href="/" className=" md:text-2xl text-accent">
+        <Link href="/" className="text-[21.6px] md:text-2xl text-accent">
           home page
         </Link>
         .
