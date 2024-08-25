@@ -50,10 +50,14 @@ const config: Config = {
           width: ".5rem",
           height: ".5rem",
         },
+      },
+      windowOpen: {
+        "0%": {opacity: "0%", scale: "90%"}, "100%": {opacity: "100%", scale: "100%"},
       }
     },
     animation: {
       cursorPointer: 'cursorPointer 1s infinite',
+      windowOpen: 'windowOpen 150ms ease-in-out',
     },
   },
   plugins: [],

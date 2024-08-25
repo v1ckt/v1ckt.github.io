@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Button } from "./button";
 import Clink from "./clink";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
 
 interface ProjectCardPRops {
@@ -27,6 +27,11 @@ export default function ProjectCard({
   ltr = false,
 }: ProjectCardPRops) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    setAnimationClass("animate-windowOpen");
+  }, [isExpanded]);
 
   return (
     <div
@@ -54,7 +59,7 @@ export default function ProjectCard({
               style={{ width: width, height: "auto" }}
               className={`${
                 isExpanded
-                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8]"
+                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z[10]"
                   : ""
               }`}
             />
@@ -82,9 +87,10 @@ export default function ProjectCard({
                 src={live}
                 title={title + ` Live Preview`}
                 sandbox="allow-scripts allow-same-origin"
-                className="border-[1px] border-header-border-color shadow-window bg-main-bg rounded-2xl"
+                className={`border-[1px] border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
                 width={"100%"}
                 height={"100%"}
+                loading="lazy"
               />
               <span
                 className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all pr-3.5"

@@ -52,7 +52,7 @@
   /* background */
   --main-bg: #111;
   --header-bg: #121212d9;
-  --bg-pos: left;
+  --bg-pos: top left;
 
   /* accent */
   --accent: #0665bb;

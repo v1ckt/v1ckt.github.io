@@ -44,9 +44,13 @@ export default function Menu({
         </>
       ) : (
         <nav className="flex flex-row items-start justify-between w-full h-full pr-2">
-          <ul className="flex flex-col gap-2 self-start md:self-center cursor-pointer pt-10 md:pt-0">
+          <ul
+            className={
+              "flex flex-col gap-2 self-start md:self-center cursor-pointer pt-10 md:pt-0"
+            }
+          >
             {options.map((option, index) => (
-              <li className='' key={index}>
+              <li key={index}>
                 {option === title ? (
                   <h1>{title}</h1>
                 ) : (
