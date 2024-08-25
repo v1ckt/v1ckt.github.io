@@ -73,7 +73,7 @@ export default function ProjectCard({
               className="fixed w-[90%] h-[70%] md:w-[70%] md:h-[95%] transition-all
             flex items-center justify-center flex-col gap-4"
             >
-              <p className="text-text text-xl font-semibold">{title}</p>
+              <h4 className="font-bold">{title}</h4>
               <iframe
                 src={live}
                 title={title + ` Live Preview`}
@@ -100,8 +100,8 @@ export default function ProjectCard({
         <span className="flex flex-col items-left gap-2">
           {/* text-title */}
           <article className="flex flex-col gap-3 max-w-screen-lg">
-            <h3 className="text-title font-bold">{title}</h3>
-            <h5 className="text-text">{description}</h5>
+            <h2 className="text-title">{title}</h2>
+            <h4 className="text-text">{description}</h4>
           </article>
           {/* markers */}
           <span className="flex flex-row gap-2 items-left justify-left items-center">
