@@ -27,10 +27,21 @@ export default function ProjectCard({
   ltr = false,
 }: ProjectCardPRops) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showIframe, setShowIframe] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
 
   useEffect(() => {
-    setAnimationClass("animate-windowOpen");
+    if (isExpanded) {
+      setAnimationClass("animate-windowOpen");
+
+      const timer = setTimeout(() => {
+        setShowIframe(true);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    } else {
+      setShowIframe(false);
+    }
   }, [isExpanded]);
 
   return (
@@ -83,15 +94,22 @@ export default function ProjectCard({
             flex items-center justify-center flex-col gap-4"
             >
               <h4 className="font-bold">{title}</h4>
-              <iframe
-                src={live}
-                title={title + ` Live Preview`}
-                sandbox="allow-scripts allow-same-origin"
-                className={`border-[1px] border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
-                width={"100%"}
-                height={"100%"}
-                loading="lazy"
-              />
+              {/* open iframe when animations conclude */}
+              <div
+                className={`border-[1px] w-full h-full border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
+              >
+                {showIframe && (
+                  <iframe
+                    src={live}
+                    title={title + ` Live Preview`}
+                    sandbox="allow-scripts allow-same-origin"
+                    className="rounded-2xl"
+                    width={"100%"}
+                    height={"100%"}
+                    loading="lazy"
+                  />
+                )}
+              </div>
               <span
                 className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all pr-3.5"
                 onClick={() => setIsExpanded(!isExpanded)}
