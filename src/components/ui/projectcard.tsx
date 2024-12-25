@@ -29,6 +29,7 @@ export default function ProjectCard({
   const [isExpanded, setIsExpanded] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (isExpanded) {
@@ -41,6 +42,8 @@ export default function ProjectCard({
       return () => clearTimeout(timer);
     } else {
       setShowIframe(false);
+      setIsLoading(true);
+      setIsExpanded(false);
     }
   }, [isExpanded]);
 
@@ -68,11 +71,6 @@ export default function ProjectCard({
               height={0}
               sizes="100vw"
               style={{ width: width, height: "auto" }}
-              className={`${
-                isExpanded
-                  ? "fixed top-[50%] translate-y-[-50%] right-[50%] translate-x-[50%] scale-[0.8] z[10]"
-                  : ""
-              }`}
             />
             {live && (
               <p
@@ -96,8 +94,15 @@ export default function ProjectCard({
               <h4 className="font-bold">{title}</h4>
               {/* open iframe when animations conclude */}
               <div
-                className={`border-[1px] w-full h-full border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
+                className={`relative border-[1px] w-full h-full border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
               >
+                {isLoading && (
+                  <h2
+                    className={`absolute right-[50%] bottom-[50%] translate-x-[50%] translate-y-[50%]`}
+                  >
+                    Loading...
+                  </h2>
+                )}
                 {showIframe && (
                   <iframe
                     src={live}
@@ -107,7 +112,11 @@ export default function ProjectCard({
                     width={"100%"}
                     height={"100%"}
                     loading="lazy"
-                  />
+                    onLoad={() => {
+                      setAnimationClass("animate-windowClose");
+                      setIsLoading(false);
+                    }}
+                  ></iframe>
                 )}
               </div>
               <span
