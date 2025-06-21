@@ -1,7 +1,7 @@
 {
     "contact": {
         "email": "txvicktor@gmail.com",
-        "phone": "(99) 9 9169-6318"
+        "phone": "+55 (99) 9 9169-6318"
     },
     "social": {
         "linkedin": {
@@ -17,7 +17,7 @@
             "url": "https://v1ckt.github.io"
         }
     },
-    "languages": ["Portuguese - Native", "English - Intermediate"],
+    "languages": ["Português - Nativo", "Inglês - Intermediário"],
     "skills": {
         "next": {
             "name": "Next Js"
@@ -70,13 +70,13 @@
             "name": "VS Code"
         }
     },
-    "about": "Front-end Web Developer with a Computer Science degree. Proficient in crafting user interfaces and developing web applications using modern frameworks and technologies. Seeking challenging opportunities to contribute to innovate projects.",
+    "about": "Desenvolvedor Web Front-end com graduação em Ciência da Computação. Proficiente em criar interfaces de usuário e desenvolver aplicativos web usando frameworks e tecnologias modernas. Buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
     "experience": {
-        "title": "Professional Experience",
+        "title": "Experiência Profissional",
         "experiences": {
             "graphic-design": {
-                "title": "Graphic Designer",
-                "level": "Intern",
+                "title": "Designer Gráfico",
+                "level": "Estagiário",
                 "company": "Câmara de Dirigentes Lojistas de Caxias",
                 "date": "April 2022 - October 2022",
                 "job": "Developed visual concepts for company social media. Created and edited images for digital and print designs. Managed and updated the company social media."

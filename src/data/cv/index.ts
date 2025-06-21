@@ -5,11 +5,11 @@ export const data = {
       icon: icon.email
     },
     phone: {
-      name: "(99) 9 9169-6318",
+      name: "+55 (99) 9 9169-6318",
       icon: icon.phone
     },
     address: {
-      name: `Rua Vinícius de Moraes, 313 Liberdade II - Parauapebas, Brazil`,
+      name: `Rua Rio Juruá, 285 - Trezidela, Barra do Corda - MA`,
       icon: icon.location
     }
   },
@@ -31,8 +31,8 @@ export const data = {
       }
     },
     languages: {
-      portuguese: {name: "Portuguese - Native", icon: icon.br},
-      english: {name: "English - Intermediate", icon: icon.us}
+      portuguese: {name: "Português - Nativo", icon: icon.br},
+      english: {name: "Inglês - Intermediário", icon: icon.us}
     },
     skills: {
       next: {
@@ -78,6 +78,10 @@ export const data = {
       dart: {
         name: "Dart",
         icon: icon.dart
+      },
+      sql: {
+        name: "SQL",
+        icon: icon.sql
       }
     },
     tools: {
@@ -102,42 +106,50 @@ export const data = {
         icon: icon.vscode
       }
     },
-    about: "Front-end Web Developer with a Computer Science degree. Proficient in crafting user interfaces and developing web applications using modern frameworks and technologies. Seeking challenging opportunities to contribute to innovate projects.",
+    about: "Desenvolvedor Web Front-end com graduação em Ciência da Computação. Experiente em criar e desenvolver interfaces de usuário e aplicativos web usando frameworks e tecnologias modernas. Sempre buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
     experience: {
-      title: "Professional Experience",
+      title: "Experiência Profissional",
       experiences: {
-        graphicdesign: {
-          title: "Graphic Designer",
-          level: "Intern",
-          company: "Câmara de Dirigentes Lojistas de Caxias",
-          date: "April 2022 - October 2022",
-          job: "Developed visual concepts for company social media. Created and edited images for digital and print designs. Managed and updated the company social media."
+        
+        trato: {
+          title: "Desenvolvedor de Aplicativos e Projetos",
+          company: "Trato Soluções - Energia Solar",
+          level: "",
+          date: "September 2024 - Agora",
+          job: "Desenvolvi aplicativos. Gerenciei e desenvolvi projetos. Mapeei e analisei processos empresariais."
         },
         uiuxdesigner: {
-          title: "UI/UX Designer",
-          level: "Intern",
+          title: "Designer de UI/UX",
+          level: "Estágio",
           company: "Norte Sul Tecnologia",
-          date: "February 2023 - August 2023",
-          job: "Created wireframes and mockups for web applications."
+          date: "Fevereiro 2023 - Agosto 2023",
+          job: "Criei wireframes e mockups para aplicativos e sites."
+        },
+        graphicdesign: {
+          title: "Designer Gráfico",
+          level: "Estágio",
+          company: "Câmara de Dirigentes Lojistas de Caxias",
+          date: "Abril 2022 - Outubro 2022",
+          job: "Desenvolvi conceitos visuais para redes sociais da empresa. Criei e editei imagens para designs digitais e impressos. Gerenciei e atualizei as redes sociais da empresa."
         }
       }
     },
     education: {
-      title: "Education",
+      title: "Educação",
       courses: {
         computerscience: {
-          name: "Computer Science",
-          level: "Bachelor Degree",
+          name: "Bacharel em Ciência da Computação",
+          level: "Bacharelado",
           institution: "Instituto Federal de Educação, Ciência e Tecnologia do Maranhão - IFMA",
           date: "2020 - 2024"
         }
       }
     },
     courses: {
-      title: "Certifications",
+      title: "Certificações",
       courses: {
         react: {
-          name: "Front-end in React Js",
+          name: "Front-end em React Js",
           company: "Ada Tech",
           date: "2024"
         }

@@ -1,6 +1,6 @@
 {
   "name": "v1ckt",
-  "version": "0.1.0",
+  "version": "0.1.0g",
   "private": true,
   "scripts": {
     "clean": "rimraf /out",

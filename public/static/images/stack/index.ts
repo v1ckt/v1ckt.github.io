@@ -11,7 +11,7 @@ import next from './Next.svg';
 
 const stack = [css, javascript, typescript, react, sass, tailwindcss];
 const namedStack = [
-    // { name: 'CSS', data: css, color: '#128bb9' },
+    { name: 'CSS', data: css, color: '#128bb9' },
     { name: 'Next Js', data: next, color: '#1c1c1c' },
     { name: 'React', data: react, color: "#0DB6DB" },
     { name: 'TypeScript', data: typescript, color: '#1976D2' },

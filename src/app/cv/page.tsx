@@ -32,7 +32,7 @@ export default function CV() {
                 Vicktor Emannoel Pereira Teixeira
               </p>
               <p className="md:text-xl text-text font-semibold">
-                Computer Science Bachelor and Frontend Engineer
+                Bacharel em Ciência da Computação
               </p>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function CV() {
         <Card className="flex max-w-[360px] md:w-auto">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3">
-              <h6 className="text-title">Contact</h6>
+              <h6 className="text-title">Contato</h6>
               <ul className="flex flex-col gap-2">
                 {Object.entries(data.contact).map(([key, value]) => (
                   <li key={key}>
@@ -85,7 +85,7 @@ export default function CV() {
             </div>
             {separator}
             <div className="flex flex-col gap-3">
-              <h6 className="text-title">Languages</h6>
+              <h6 className="text-title">Idiomas</h6>
               <ul className="flex flex-col gap-2">
                 {Object.entries(data.languages).map(([key, value]) => (
                   <li key={key}>
@@ -104,7 +104,7 @@ export default function CV() {
             </div>
             {separator}
             <div className="flex flex-col gap-3">
-              <h6 className="text-title">Skills</h6>
+              <h6 className="text-title">Habilidades</h6>
               <div className="flex flex-row gap-16">
                 <ul className="flex flex-col gap-2">
                   {Object.entries(data.skills)
@@ -143,8 +143,8 @@ export default function CV() {
               </div>
             </div>
             {separator}
-            <div className="flex flex-col gap-3">
-              <h6 className="text-title">Tools</h6>
+            <div className="flex flex-col gap-1">
+              <h6 className="text-title">Ferramentas</h6>
               <div className="flex flex-row gap-7">
                 <ul className="flex flex-col gap-2">
                   {Object.entries(data.tools)
@@ -187,7 +187,7 @@ export default function CV() {
         <Card className="flex-1">
           <div className="flex flex-col gap-4">
             <div className="flex gap-3 flex-col">
-              <h6 className="text-title">About</h6>
+              <h6 className="text-title">Sobre</h6>
               <p>{data.about}</p>
             </div>
             {separator}
