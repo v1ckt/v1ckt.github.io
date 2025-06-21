@@ -6,7 +6,7 @@ interface WorkStatusProps {
 }
 
 export default function WorkStatus({
-  status = "Open to work",
+  status = "Working",
   className,
 }: WorkStatusProps) {
   return (
@@ -18,7 +18,10 @@ export default function WorkStatus({
     >
       <p className="text-sm text-otw-text font-medium group-hover:-mt-8 transition-all duration-300 ease-in">{status}</p>
       {status === "Open to work" && (
-        <p className="text-sm text-otw-text font-medium inline-flex items-center gap-.5 ml-1">Hire me <IoIosArrowForward /></p>
+      <p className="text-sm text-otw-text font-medium inline-flex items-center gap-.5 ml-1">Hire me <IoIosArrowForward /></p>
+    )}
+      {status === "Working" && (
+        <p className="text-sm text-otw-text font-medium inline-flex items-center gap-.5 ml-1">Contact me <IoIosArrowForward /></p>
       )}
     </span>
   );
