@@ -1,6 +1,6 @@
 import Clink from "../ui/clink";
 import ProjectCard from "../ui/projectcard";
-import { ToDoList, BoateAzul, PhotoShot } from "@images/projects";
+import * as projectImg from "@images/projects";
 
 interface ProjectSectionProps {
   className?: string;
@@ -15,7 +15,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       technologies: ["HTML", "CSS", "JavaScript", "React"],
       github: "https://github.com/v1ckt/todo",
       live: "https://v1ckt.github.io/todo",
-      images: [ToDoList.src],
+      images: projectImg.todolists.map(item => item.src),
     },
     {
       title: "Boate Azul",
@@ -24,7 +24,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       technologies: ["HTML", "CSS", "PHP", "Laravel", "MySQL"],
       github: "https://github.com/v1ckt/BoateAzul",
       live: "https://v1ckt.github.io/BoateAzulFirstLook/",
-      images: [BoateAzul.src],
+      images: projectImg.boateazuls.map(item => item.src),
     },
     {
       title: "PhotoShot",
@@ -33,7 +33,16 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       technologies: ["Flutter", "Dart", "Firebase"],
       github: "https://github.com/v1ckt/PhotoShot_Mobile",
       live: null,
-      images: [PhotoShot.src],
+      images: projectImg.photoshots.map(item => item.src),
+    },
+    {
+      title: "Raimunda",
+      description:
+        '"Raimunda" is an AI Assistant made for Trato Soluções - Energia Solar. It helps new employees by answering questions about official documentations and proccesses from the company. It works due to the Open AI Assistants API.',
+      technologies: ["Electron", "React", "Open AI Assistant API"],
+      github: "",
+      live: null,
+      images: projectImg.raimundas.map(item => item.src),
     },
   ];
   return (
@@ -46,14 +55,14 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
       <div className="flex flex-col gap-0 items-end">
         <article className="flex flex-col gap-4">
           <h2 className="text-title">Featured Projects</h2>
-          <h3>
+          <h4>
             For my personal projects, I like to always keep a clean and
             minimalist user interface. That helps the user to find what they
             need in a straight way, with no unnecessary distractions. Sometimes
             less means more.
-          </h3>
+          </h4>
         </article>
-            <Clink href="#" title="View more projects" arrow />
+        <Clink href="#" title="View more projects" arrow />
       </div>
       <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-160">
         {projects.map((p, index) => (
@@ -65,7 +74,6 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
               github={p.github}
               live={p.live}
               images={p.images}
-              width={p.technologies.includes("Flutter") ? "75%" : "50rem"}
               ltr={index % 2 === 0}
             />
           </li>

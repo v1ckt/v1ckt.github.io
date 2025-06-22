@@ -17,7 +17,7 @@ export function Button({
   href,
   title,
   image,
-  fontSize = "text-base",
+  fontSize = "text-sm",
   className,
   leftIcon,
   rightIcon,

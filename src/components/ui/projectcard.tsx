@@ -4,6 +4,7 @@ import { Button } from "./button";
 import Clink from "./clink";
 import { useEffect, useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
+import { FaExpand } from "react-icons/fa";
 
 interface ProjectCardPRops {
   title: string;
@@ -23,66 +24,81 @@ export default function ProjectCard({
   technologies,
   github,
   live,
-  width,
   ltr = false,
 }: ProjectCardPRops) {
+  const [isLiveOpen, setIsLiveOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [showIframe, setShowIframe] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (isExpanded) {
+    let timer: NodeJS.Timeout;
+    if (isLiveOpen) {
       setAnimationClass("animate-windowOpen");
-
-      const timer = setTimeout(() => {
-        setShowIframe(true);
-      }, 1000);
-
-      return () => clearTimeout(timer);
+      timer = setTimeout(() => setShowIframe(true), 1000);
     } else {
       setShowIframe(false);
       setIsLoading(true);
-      setIsExpanded(false);
     }
-  }, [isExpanded]);
+
+    if (isExpanded) {
+      setAnimationClass("animate-windowOpen");
+    }
+
+    return () => clearTimeout(timer);
+  }, [isLiveOpen, isExpanded]);
 
   return (
     <div
       className={`flex ${
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
-      } items-center justify-between gap-10 md:gap-16`}
+      } items-center justify-evenly gap-10 md:gap-16`}
+      style={{ maxWidth: "85vw" }}
     >
       <figure
-        className={`flex flex-row items-center justify-center relative w-full h-full group rounded-2xl ${
-          width === "50rem" ? "shadow-window" : "drop-shadow-window"
-        } overflow-hidden`}
+        className="flex flex-row items-center justify-center relative w-full h-full group rounded-2xl shadow-window overflow-hidden"
+        style={{
+          width: "auto",
+          maxWidth: "100%",
+          height: "auto",
+        }}
       >
-        {images.map((image, index) => (
+        {images[0] && (
           <div
-            key={index}
             style={{ width: "auto", height: "auto" }}
             className="flex justify-center"
           >
             <Image
-              src={image}
+              className="rounded-2xl"
+              src={images[0]}
               alt={title}
               width={0}
               height={0}
-              sizes="100vw"
-              style={{ width: width, height: "auto" }}
+              style={{
+                width: "auto",
+                height: "auto",
+                maxWidth: "100%",
+                maxHeight: "79vh",
+              }}
             />
+            <p
+              onClick={() => setIsExpanded(!isLiveOpen)}
+              className="absolute hidden md:flex w-max -top-10 group-hover:top-[8px] right-[8px] cursor-pointer bg-project-marker text-project-marker-text p-2 rounded-full text-sm transition-all shadow-icon"
+            >
+              <FaExpand />
+            </p>
             {live && (
               <p
-                onClick={() => setIsExpanded(!isExpanded)}
+                onClick={() => setIsLiveOpen(!isLiveOpen)}
                 className="absolute hidden md:flex w-max -bottom-10 group-hover:bottom-[5%] left-[50%] translate-x-[-50%] cursor-pointer bg-project-marker text-project-marker-text px-4 py-2 rounded-full text-sm transition-all shadow-icon"
               >
                 Click here to preview
               </p>
             )}
           </div>
-        ))}
-        {isExpanded && live! && (
+        )}
+        {isLiveOpen && live! && (
           <div
             className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
           bg-header-bg flex items-center justify-center"
@@ -121,7 +137,7 @@ export default function ProjectCard({
               </div>
               <span
                 className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all pr-3.5"
-                onClick={() => setIsExpanded(!isExpanded)}
+                onClick={() => setIsLiveOpen(!isLiveOpen)}
               >
                 <RiCloseFill
                   className="size-[22px] cursor-pointer"
@@ -133,12 +149,63 @@ export default function ProjectCard({
           </div>
         )}
       </figure>
-      <div className="flex flex-col items-left justify-start gap-6 px-0">
+      {isExpanded && (
+        <div
+          className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
+          bg-header-bg flex items-center justify-center"
+        >
+          <div
+            className="fixed w-[90%] h-[70%] md:w-[70%] md:h-[95%] transition-all
+            flex items-center justify-center flex-col gap-4 overflow-hidden"
+          >
+            <h4 className="font-bold">{title}</h4>
+            {/* open iframe when animations conclude */}
+            {/* <div
+              className={`relative border-[1px] w-full h-full border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
+            > */}
+            <div
+              className={`${animationClass} flex flex-row overflow-auto snap-x`}
+            >
+              {images.map((image, index) => (
+                <Image
+                  className="rounded-2xl snap-mandatory"
+                  key={index}
+                  src={image}
+                  alt={title}
+                  width={0}
+                  height={0}
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    maxWidth: "100%",
+                    maxHeight: "79vh",
+                  }}
+                />
+              ))}
+            </div>
+            {/* </div> */}
+            <span
+              className="flex items-center justify-center gap-0.5 px-2 py-1 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all pr-3.5"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              <RiCloseFill
+                className="size-[22px] cursor-pointer"
+                color="var(--text-title)"
+              />
+              <p className="text-text">Close</p>
+            </span>
+          </div>
+        </div>
+      )}
+      <div
+        className="flex flex-col items-left justify-start gap-6 px-0 max-w-xl"
+        // style={{ maxWidth: "50vw" }}
+      >
         <span className="flex flex-col items-left gap-4">
           {/* text-title */}
           <article className="flex flex-col gap-3 max-w-screen-lg">
-            <h3 className="text-title font-bold">{title}</h3>
-            <h4 className="text-text">{description}</h4>
+            <h4 className="text-title font-bold">{title}</h4>
+            <h5 className="text-text">{description}</h5>
           </article>
           {/* markers */}
           <span className="flex flex-row gap-2.5 items-left justify-left items-center">
@@ -154,16 +221,18 @@ export default function ProjectCard({
           </span>
         </span>
         {/* buttons */}
-        <div className="flex flex-row-gap-4 items-center justify-left gap-4">
-          <Button title="Github Repo" href={github} fontSize="1.125rem" />
-          {live && (
-            <Clink
-              href={live}
-              title="Live Site"
-              className="text-lg hover:brightness-[1.2] hover:contrast-[0.8]"
-            />
-          )}
-        </div>
+        {github && (
+          <div className="flex flex-row-gap-4 items-center justify-left gap-4">
+            <Button title="Github Repo" href={github} />
+            {live && (
+              <Clink
+                href={live}
+                title="Live Site"
+                className="text-lg hover:brightness-[1.2] hover:contrast-[0.8]"
+              />
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

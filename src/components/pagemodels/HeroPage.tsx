@@ -41,10 +41,10 @@ export default function HeroPage({ className }: HeroPageProps) {
         <article className="flex flex-col gap-6 items-center md:items-start">
           <ProfilePic size={6} />
           <div className="flex flex-col gap-2 text-center md:text-start md:max-w-prose">
-            <h1 className="text-title">Hello, I&apos;m Vicktor Teixeira</h1>
-            <h2 className="font-semibold">
+            <h2 className="text-title">Hello, I&apos;m Vicktor Teixeira</h2>
+            <h3 className="font-semibold">
               Frontend engineer and computer science bachelor.
-            </h2>
+            </h3>
           </div>
         </article>
         <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
