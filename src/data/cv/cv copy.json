@@ -70,23 +70,37 @@
             "name": "VS Code"
         }
     },
-    "about": "Front-end Web Developer with a Computer Science degree. Proficient in crafting user interfaces and developing web applications using modern frameworks and technologies. Seeking challenging opportunities to contribute to innovate projects.",
+    "about": "Software Engineer with a Computer Science degree. Proficient in crafting user interfaces and developing web applications using modern frameworks and technologies. Seeking challenging opportunities to contribute to innovate projects.",
     "experience": {
         "title": "Professional Experience",
         "experiences": {
-            "graphic-design": {
+            "cdl": {
                 "title": "Graphic Designer",
                 "level": "Intern",
                 "company": "Câmara de Dirigentes Lojistas de Caxias",
                 "date": "April 2022 - October 2022",
                 "job": "Developed visual concepts for company social media. Created and edited images for digital and print designs. Managed and updated the company social media."
             },
-            "ui-ux-designer": {
+            "norte-sul-tecnologia": {
                 "title": "UI/UX Designer",
                 "level": "Intern",
                 "company": "Norte Sul Tecnologia",
                 "date": "February 2023 - August 2023",
                 "job": "Created wireframes and mockups for web applications."
+            },
+            "trato-solucoes": {
+                "title": "Programador e Gerente de Projetos",
+                "level": "Junior",
+                "company": "Trato Soluções - Eenrgia Solar",
+                "date": "August 2024 - March 2025",
+                "job": "Developed applications and AI assistants. Managed and developed business proccess and projects. Implemented project management systems."
+            },
+            "infospecter": {
+                "title": "Software Engineer",
+                "company": "Info Specter",
+                "level": "Junior",
+                "date": "April 2024 - currently",
+                "job": "Developing for school activity management systems."
             }
         }
     },

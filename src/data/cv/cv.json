@@ -70,23 +70,37 @@
             "name": "VS Code"
         }
     },
-    "about": "Desenvolvedor Web Front-end com graduação em Ciência da Computação. Proficiente em criar interfaces de usuário e desenvolver aplicativos web usando frameworks e tecnologias modernas. Buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
+    "about": "Engenheiro de software com graduação em Ciência da Computação. Proficiente em criar interfaces de usuário e desenvolver aplicativos web usando frameworks e tecnologias modernas. Buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
     "experience": {
         "title": "Experiência Profissional",
         "experiences": {
+            "infospecter": {
+                "title": "Software Engineer",
+                "company": "Info Specter",
+                "level": "Junior",
+                "date": "Abril 2024 - atualmente",
+                "job": "Desenvolvendo sistemas para gerenciamento de atividades escolares"
+            },
+            "trato": {
+                "title": "Desenvolvedor de Aplicativos e Projetos",
+                "company": "Trato Soluções - Energia Solar",
+                "level": "Junior",
+                "date": "Setembro 2024 - Março 2025",
+                "job": "Desenvolvi aplicativos e assistentes virtuais de inteligência artificial. Gerenciei e desenvolvi projetos e processos empresariais. Implementei sistemas de gerenciamento de projetos."
+            },
             "graphic-design": {
                 "title": "Designer Gráfico",
-                "level": "Estagiário",
+                "level": "Estágio",
                 "company": "Câmara de Dirigentes Lojistas de Caxias",
                 "date": "April 2022 - October 2022",
-                "job": "Developed visual concepts for company social media. Created and edited images for digital and print designs. Managed and updated the company social media."
+                "job": "Desenvolvi conceitos visuais para redes sociais da empresa. Criei e editei imagens para designs digitais e impressos. Gerenciei e atualizei as redes sociais da empresa."
             },
             "ui-ux-designer": {
                 "title": "UI/UX Designer",
-                "level": "Intern",
+                "level": "Estágio",
                 "company": "Norte Sul Tecnologia",
                 "date": "February 2023 - August 2023",
-                "job": "Created wireframes and mockups for web applications."
+                "job": "Criei wireframes para aplicativos web."
             }
         }
     },

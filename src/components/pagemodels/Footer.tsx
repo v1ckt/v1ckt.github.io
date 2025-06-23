@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-row w-full items-start gap-16 md:gap-32">
           <ul className="flex flex-col items-left gap-4">
             <li>
-              <p className="text-title font-bold opacity-80">Contact/Social</p>
+              <p className="text-title/80 font-bold">Contact/Social</p>
             </li>
             {links.map((l, index) => (
               <li key={index} className="group">
@@ -24,7 +24,7 @@ export default function Footer() {
           </ul>
           <ul className="flex flex-col items-left gap-4">
             <li>
-              <p className="text-title font-bold opacity-80">Options</p>
+              <p className="text-title/80 font-bold">Options</p>
             </li>
             {options.map((l, index) => (
               <li key={index} className="group">

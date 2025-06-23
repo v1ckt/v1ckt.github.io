@@ -31,23 +31,21 @@ export default function HeroPage({ className }: HeroPageProps) {
     <section
       style={{ height: "calc(100vh - 4rem)" }}
       className={
-        `flex flex-col-reverse items-center justify-evenly
-      md:justify-between w-full px-6 md:px-24 md:flex-row
-      bg-gradient-to-t from-[transparent] to-80% to-main-bg
-      md:bg-gradient-to-r ` + className
+      `flex flex-col-reverse items-center justify-center w-full px-6 md:px-24 md:flex-row
+      bg-radial from-main-bg from-20% to-transparent ` + className
       }
     >
-      <div className="flex flex-col align-start gap-6">
-        <article className="flex flex-col gap-6 items-center md:items-start">
+      <div className="flex flex-col align-center gap-6 pb-72 md:pb-32">
+        <article className="flex flex-col gap-6 items-center">
           <ProfilePic size={6} />
-          <div className="flex flex-col gap-2 text-center md:text-start md:max-w-prose">
+          <div className="flex flex-col gap-2 text-center md:max-w-prose">
             <h2 className="text-title">Hello, I&apos;m Vicktor Teixeira</h2>
             <h3 className="font-semibold">
               Frontend engineer and computer science bachelor.
             </h3>
           </div>
         </article>
-        <span className="flex flex-row  justify-center items-center gap-6 md:justify-start">
+        <span className="flex flex-row  justify-center items-center gap-6">
           <Button
             data-nosnippet
             className="group overflow-hidden relative px-7 py-3"

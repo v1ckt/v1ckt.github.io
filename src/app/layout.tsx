@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import Header from "@/components/header/header";
+import ThemeSetter from "@/components/config/themeSetter";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,21 +28,10 @@ export default function RootLayout({
         />
         <link rel="canonical" href="https://v1ckt.github.io" />
         <link rel="icon" href="./favicon.ico" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                (function() {
-                  const storedTheme = localStorage.getItem('theme');
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  const theme = storedTheme || (prefersDark ? 'dark' : 'light');
-                  document.documentElement.setAttribute('data-theme', theme);
-                })();
-              `,
-          }}
-        />
       </head>
       <body className={inter.className}>
-        <Header className="z-[100]" />
+        <ThemeSetter />
+        <Header className="z-10" />
         {children}
       </body>
     </html>

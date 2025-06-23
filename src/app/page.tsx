@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <div
-        className="absolute inset-0 z-0 transition-none mt-16"
+        className="absolute inset-0 transition-none mt-16"
         style={{
           backgroundImage: "url('/static/images/bg.svg')",
           backgroundSize: "59rem",
@@ -15,7 +15,7 @@ export default function Home() {
           opacity: "0.1",
         }}
       />
-      <div className="relative z-1 w-full flex flex-col items-center justify-between">
+      <div className="relative w-full flex flex-col items-center justify-between">
         <HeroPage className="mt-16" />
         <StackSection className="mt-8" />
         <ProjectSection className="pt-16" />

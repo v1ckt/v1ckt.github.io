@@ -28,7 +28,8 @@ export default function Menu({
   return (
     <div
       className={
-        `flex row items-center gap-2 text-title justify-between ` + className
+        `flex flex-row gap-2 items-center text-title justify-between ` +
+        className
       }
     >
       {!isOpen ? (
@@ -46,7 +47,7 @@ export default function Menu({
         <nav className="flex flex-row items-start justify-between w-full h-full pr-2">
           <ul
             className={
-              "flex flex-col gap-2 self-start md:self-center cursor-pointer pt-10 md:pt-0"
+              "flex flex-col gap-0 self-start md:self-center cursor-pointer pt-10 md:pt-0"
             }
           >
             {options.map((option, index) => (

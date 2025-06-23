@@ -100,7 +100,7 @@ export default function ProjectCard({
         )}
         {isLiveOpen && live! && (
           <div
-            className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
+            className="w-full h-full fixed top-0 left-0 z-50 backdrop-blur-lg
           bg-header-bg flex items-center justify-center"
           >
             <div
@@ -151,7 +151,7 @@ export default function ProjectCard({
       </figure>
       {isExpanded && (
         <div
-          className="w-full h-full fixed top-0 left-0 z-[999] backdrop-blur-lg
+          className="w-full h-full fixed top-0 left-0 z-50 backdrop-blur-lg
           bg-header-bg flex items-center justify-center"
         >
           <div

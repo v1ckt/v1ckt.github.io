@@ -1,12 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   /* font-size: 16px; */
   user-select: none;
   -webkit-user-drag: none;
   list-style: none;
+}
+
+@theme {
+  --color-main-bg: var(--main-bg);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-title: var(--title);
+  --color-text: var(--text);
+  --colorproject-marker-text: var(--project-marker-text);
+  --color-menu-marker-text: var(--menu-marker-text);
+  --color-link-text: var(--link-text);
+  --color-project-marker: var(--project-marker);
+  --color-menu-marker: var(--menu-marker);
+  --color-otw-bg: var(--otw-bg);
+  --color-otw-text: var(--otw-text);
+  --color-profile-pic-bg: var(--profile-pic-bg);
+  --color-header-border-color: var(--header-border-color);
+  --color-bg-switch-pill: var(--bg-switch-pill);
+  --color-header-bg: var(--header-bg);
+  --color-menu-bg: var(--bg-menu);
+  --color-card-bg: var(--card-bg);
+  --shadow-icon: 0px 8px 24px -4px rgb(0 0 0 / 0.2), 0px 4px 8px -2px rgb(0 0 0 / .1);
+  --shadow-window: 0px 14px 16px rgb(0 0 0 / 0.1), 0 0 1px rgb(0 0 0 / 0.1);
+  --drop-shadow-window: 0px 14px 16px rgb(0 0 0 / 0.1), 0px 0px 1px rgb(0 0 0 / 0.1);
+  --animate-cursorPointer: cursorPointer 1s infinite;
+  --animate-windowOpen: windowOpen 150ms ease-in-out;
 }
 
 :root {
@@ -101,38 +125,38 @@ body {
 }
 
 h1 {
-  /* @apply text-[2.5rem] md:text-[3.25rem] font-bold leading-[120%] tracking-[-0.05em]; */
-  @apply text-[2.5rem] md:text-5xl font-bold leading-[120%] tracking-[-0.05em];
+  /* @apply text-[2.5rem] md:text-[3.25rem] font-bold leading-[120%] tracking-[-0.03em]; */
+  @apply text-[2.5rem] md:text-5xl font-bold leading-[130%] tracking-[-0.03em];
 }
 
 h2 {
-  /* @apply text-[2rem] md:text-5xl font-bold leading-[130%] tracking-[-0.04em]; */
-  @apply text-[2rem] md:text-4xl font-bold leading-[130%] tracking-[-0.04em];
+  /* @apply text-[2rem] md:text-5xl font-bold leading-[130%] tracking-[-0.03em]; */
+  @apply text-[2rem] md:text-4xl font-bold leading-[130%] tracking-[-0.03em];
 }
 
 h3 {
-  /* @apply text-[1.8rem] md:text-4xl font-semibold leading-[120%] tracking-[-0.04em]; */
-  @apply text-[1.8rem] md:text-3xl font-medium leading-[120%] tracking-[-0.04em];
+  /* @apply text-[1.8rem] md:text-4xl font-semibold leading-[120%] tracking-[-0.03em]; */
+  @apply text-[1.8rem] md:text-3xl font-semibold leading-[130%] tracking-[-0.03em];
 }
 
 h4 {
-  /* @apply text-[1.8rem] md:text-[32px] font-medium leading-[130%] tracking-[-0.04em]; */
-  @apply text-[1.8rem] md:text-2xl font-medium leading-[130%] tracking-[-0.04em];
+  /* @apply text-[1.8rem] md:text-[32px] font-medium leading-[130%] tracking-[-0.03em]; */
+  @apply text-[1.8rem] md:text-2xl font-semibold leading-[130%] tracking-[-0.03em];
 }
 
 h5 {
-  /* @apply text-[1.4rem] md:text-[24px] font-medium leading-[130%] tracking-[-0.04em]; */
-  @apply text-[1.4rem] md:text-xl font-medium leading-[130%] tracking-[-0.04em];
+  /* @apply text-[1.4rem] md:text-[24px] font-medium leading-[130%] tracking-[-0.03em]; */
+  @apply text-[1.4rem] md:text-xl font-medium leading-[130%] tracking-[-0.03em];
 }
 
 h6 {
-  /* @apply text-[1.2rem] md:text-[20px] font-medium leading-[130%] tracking-[-0.04em]; */
-  @apply text-[1.2rem] md:text-lg font-medium leading-[130%] tracking-[-0.04em];
+  /* @apply text-[1.2rem] md:text-[20px] font-medium leading-[130%] tracking-[-0.03em]; */
+  @apply text-[1.2rem] md:text-lg font-medium leading-[130%] tracking-[-0.03em];
 }
 
 p {
   /* @apply text-base font-medium tracking-[-0.04em]; */
-  @apply text-base font-medium tracking-[-0.04em];
+  @apply tracking-[-0.04em];
 }
 
 @layer utilities {
@@ -157,11 +181,39 @@ p {
   box-sizing: border-box;
 }
 
+@keyframes cursorPointer {
+
+  0%,
+  100% {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  50% {
+    width: .5rem;
+    height: .5rem;
+  }
+}
+
+
+@keyframes windowOpen {
+  0% {
+    opacity: 0%;
+    scale: 90%;
+  }
+
+  100% {
+    opacity: 100%;
+    scale: 100%;
+  }
+
+}
+
 @media print {
   @layer base {
     * {
       -webkit-print-color-adjust: exact;
-      color-adjust: exact;
+      print-color-adjust: exact;
       user-select: all;
     }
 

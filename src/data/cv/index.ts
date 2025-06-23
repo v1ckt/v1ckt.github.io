@@ -9,7 +9,7 @@ export const data = {
       icon: icon.phone
     },
     address: {
-      name: `Rua Rio Juruá, 285 - Trezidela, Barra do Corda - MA`,
+      name: `Barra do Corda/MA - Brazil`,
       icon: icon.location
     }
   },
@@ -106,17 +106,24 @@ export const data = {
         icon: icon.vscode
       }
     },
-    about: "Desenvolvedor Web Front-end com graduação em Ciência da Computação. Experiente em criar e desenvolver interfaces de usuário e aplicativos web usando frameworks e tecnologias modernas. Sempre buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
+    about: "Engenheiro de software com graduação em Ciência da Computação. Experiente em criar e desenvolver interfaces de usuário e aplicativos web usando frameworks e tecnologias modernas. Sempre buscando oportunidades desafiadoras para contribuir com projetos inovadores.",
     experience: {
       title: "Experiência Profissional",
       experiences: {
         
+        infospecter: {
+          title: "Engenheiro de Software",
+          company: "Info Specter",
+          level: "Júnior",
+          date: "Abril 2024 - atualmente",
+          job: "Desenvolvendo sistemas para gerenciamento de atividades escolares"
+        },
         trato: {
           title: "Desenvolvedor de Aplicativos e Projetos",
           company: "Trato Soluções - Energia Solar",
-          level: "",
-          date: "September 2024 - Agora",
-          job: "Desenvolvi aplicativos. Gerenciei e desenvolvi projetos. Mapeei e analisei processos empresariais."
+          level: "Júnior",
+          date: "Setembro 2024 - Março 2025",
+          job: "Desenvolvi aplicativos e assistentes virtuais de inteligência artificial. Gerenciei e desenvolvi projetos e processos empresariais. Implementei sistemas de gerenciamento de projetos."
         },
         uiuxdesigner: {
           title: "Designer de UI/UX",

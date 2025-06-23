@@ -13,13 +13,12 @@ export default function CV() {
   };
 
 
-  const separator = <li className="w-full h-px bg-[gray] opacity-20" />;
+  const separator = <li className="w-full h-px bg-[gray]/20" />;
 
   return (
-    <div className="z-[200] absolute top-0 left-0 bg-main-bg">
+    <div className="absolute top-0 left-0 bg-main-bg">
       <header
-        className={`flex z-[999] sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 md:px-24 select-none
-        border-b-[1px] border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}
+        className={`flex z-auto sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 md:px-24 select-none border-b-px border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}
       >
         <div className="flex flex-row items-center gap-4 text-title">
           <Link href="/">
