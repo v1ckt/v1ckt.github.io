@@ -61,7 +61,7 @@ export default function HeroPage({ className }: HeroPageProps) {
               <IoIosArrowForward className="text-base" />
             </span>
             <p
-              className="text-base group-hover:translate-x-[130%] transition-all duration-200"
+            className="text-[18px] group-hover:translate-x-[130%] transition-all duration-200"
               data-nosnippet
             >
               Get in touch
