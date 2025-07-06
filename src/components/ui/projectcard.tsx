@@ -5,6 +5,8 @@ import Clink from "./clink";
 import { useEffect, useState } from "react";
 import { RiCloseFill } from "react-icons/ri";
 import { FaExpand } from "react-icons/fa";
+import { MdSettingsBackupRestore } from "react-icons/md";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
 interface ProjectCardPRops {
   title: string;
@@ -31,6 +33,21 @@ export default function ProjectCard({
   const [showIframe, setShowIframe] = useState(false);
   const [animationClass, setAnimationClass] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [carouselItem, setCarouselItem] = useState(0);
+
+  const prevItem = () => {
+    const isFirstItem = carouselItem === 0;
+    const newIndex = isFirstItem ? images.length - 1 : carouselItem - 1;
+    setCarouselItem(newIndex);
+  };
+  const nextItem = () => {
+    const isLastItem = carouselItem === images.length - 1;
+    const newIndex = isLastItem ? 0 : carouselItem + 1;
+    setCarouselItem(newIndex);
+  };
+  const goToItem = (index: number) => {
+    setCarouselItem(index);
+  };
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -44,6 +61,8 @@ export default function ProjectCard({
 
     if (isExpanded) {
       setAnimationClass("animate-windowOpen");
+    } else {
+      setCarouselItem(0);
     }
 
     return () => clearTimeout(timer);
@@ -155,7 +174,7 @@ export default function ProjectCard({
           bg-header-bg flex items-center justify-center"
         >
           <div
-            className="fixed w-[90%] h-[70%] md:w-[70%] md:h-[95%] transition-all
+            className="fixed max-w-[90%] max-h-[70%] md:max-w-[70%] md:max-h-[95%] w-full h-full transition-all
             flex items-center justify-center flex-col gap-4 overflow-hidden"
           >
             <h4 className="font-bold">{title}</h4>
@@ -164,24 +183,66 @@ export default function ProjectCard({
               className={`relative border-[1px] w-full h-full border-header-border-color shadow-window bg-main-bg rounded-2xl ${animationClass}`}
             > */}
             <div
-              className={`${animationClass} flex flex-row overflow-auto snap-x`}
+              className={`${animationClass} flex flex-col items-center justify-start gap-2 relative rounded-2xl`}
             >
-              {images.map((image, index) => (
-                <Image
-                  className="rounded-2xl snap-mandatory"
-                  key={index}
-                  src={image}
-                  alt={title}
-                  width={0}
-                  height={0}
-                  style={{
-                    width: "auto",
-                    height: "auto",
-                    maxWidth: "100%",
-                    maxHeight: "79vh",
-                  }}
-                />
-              ))}
+              <div
+                className="flex h-full transition-transform duration-500 ease-in-out"
+                style={{
+                  maxHeight: "75vh",
+                  maxWidth: "80vw",
+                  transform: `translateX(-${carouselItem * 100}%)`,
+                }}
+              >
+                {images.map((image, index) => (
+                  <div
+                    className="flex w-full h-full flex-shrink-0 items-center justify-center"
+                    key={index}
+                  >
+                    <Image
+                      className={`rounded-2xl transition-all duration-350 ease-in-out ${
+                        carouselItem === index
+                          ? "scale-100"
+                          : "scale-75 brightness-50 blur-sm"
+                      } w-auto h-auto`}
+                      src={image}
+                      alt={`${title} - Image ${carouselItem + 1}`}
+                      width={0}
+                      height={0}
+                      style={{
+                        width: "auto",
+                        height: "100%",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="w-auto h-auto flex flex-row gap-2">
+                {images.length > 1 && (
+                  <div className="flex flex-row items-center justify-center gap-2">
+                    <SlArrowLeft
+                      onClick={prevItem}
+                      size={28}
+                      className="px-2 text-zinc-400 cursor-pointer"
+                    />
+                    {images.map((_, index) => (
+                      <span
+                        className={`h-3 rounded-full transition-all duration-300 ${
+                          carouselItem === index
+                            ? "bg-zinc-400 w-5"
+                            : "bg-zinc-400/45 w-3"
+                        } cursor-pointer`}
+                        key={index}
+                        onClick={() => goToItem(index)}
+                      />
+                    ))}
+                    <SlArrowRight
+                      onClick={nextItem}
+                      size={28}
+                      className="px-2 text-zinc-400 cursor-pointer"
+                    />
+                  </div>
+                )}
+              </div>
             </div>
             {/* </div> */}
             <span

@@ -58,7 +58,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
           <h4>
             For my personal projects, I like to always keep a clean and
             minimalist user interface. That helps the user to find what they
-            need in a straight way, with no unnecessary distractions. Sometimes
+            need in a clear way, with no distractions. Sometimes
             less means more.
           </h4>
         </article>

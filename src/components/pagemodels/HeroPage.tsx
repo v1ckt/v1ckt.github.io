@@ -61,7 +61,7 @@ export default function HeroPage({ className }: HeroPageProps) {
               <IoIosArrowForward className="text-base" />
             </span>
             <p
-              className="text-[1.25rem] group-hover:translate-x-[130%] transition-all duration-200"
+              className="text-base group-hover:translate-x-[130%] transition-all duration-200"
               data-nosnippet
             >
               Get in touch
@@ -69,7 +69,7 @@ export default function HeroPage({ className }: HeroPageProps) {
           </Button>
           <Clink
             href="/cv"
-            className="hover:brightness-[1.2] hover:contrast-[0.8] text-xl"
+            className="hover:brightness-[1.2] hover:contrast-[0.8] text-base"
             title="View my CV"
           />
         </span>
