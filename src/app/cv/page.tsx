@@ -6,17 +6,17 @@ import Link from "next/link";
 import ProfilePic from "@/components/header/profilepic";
 import { SlArrowLeft } from "react-icons/sl";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export default function CV() {
   const handleSaveAsPDF = () => {
     window.print();
   };
 
-
   const separator = <li className="w-full h-px bg-[gray]/20" />;
 
   return (
-    <div className="absolute top-0 left-0 bg-main-bg">
+    <div className="absolute top-0 left-0 bg-main-bg z-20">
       <header
         className={`flex z-auto sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 md:px-24 select-none border-b-px border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}
       >

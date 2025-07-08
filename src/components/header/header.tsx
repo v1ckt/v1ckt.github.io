@@ -1,15 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Menu from "./menu";
 import Profile from "./profile";
 import ThemeSwitcher from "./themeswitcher";
 import WorkStatus from "./workstatus";
 
-export default function Header({
-  className,
-}: Readonly<{ className?: string }>) {
+interface headerProps {
+  className?: string;
+}
+
+export default function Header({ className }: headerProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const openMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -38,7 +41,9 @@ export default function Header({
             <ThemeSwitcher />
             <div className="text-text bg-[gray]/10 px-2.5 py-1 md:cursor-help rounded-full group">
               <p className="text-xs md:group-hover:hidden">Beta</p>
-              <p className="text-xs hidden md:group-hover:flex">This website is under development</p>
+              <p className="text-xs hidden md:group-hover:flex">
+                This website is under development
+              </p>
             </div>
           </div>
           <nav className="flex items-center gap-4">
