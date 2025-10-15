@@ -16,7 +16,7 @@ export default function CV() {
   const separator = <li className='w-full h-px bg-[gray]/20' />;
 
   return (
-    <div className='absolute top-0 left-0 w-full h-screen overflow-scroll bg-main-bg z-20'>
+    <div className='absolute top-0 left-0 w-full h-screen overflow-scroll print:overflow-visible bg-main-bg z-20'>
       <header
         className={`flex z-auto sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 lg:px-32 2xl:px-[16vw] select-none border-b-px border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}>
         <div className='flex flex-row items-center gap-4 text-title'>
