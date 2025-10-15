@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/components/header/header";
+import localFont from "next/font/local";
 import ThemeSetter from "@/components/config/themeSetter";
 import "./globals.css";
+import Header from "@/components/header/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = localFont({
+  src: "./fonts//inter//InterVariable.woff2",
+});
 
 export const metadata: Metadata = {
   title: "Vicktor Teixeira - Dev",
@@ -20,19 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className='overflow-hidden' lang='en'>
       <head>
         <meta
-          name="google-site-verification"
-          content="loyVs7u4l-uiip0zf_XmC5ObHkJ9_bv8qdWaj0PHfNg"
+          name='google-site-verification'
+          content='loyVs7u4l-uiip0zf_XmC5ObHkJ9_bv8qdWaj0PHfNg'
         />
-        <link rel="canonical" href="https://v1ckt.github.io" />
-        <link rel="icon" href="./favicon.ico" />
+        <link rel='canonical' href='https://v1ckt.github.io' />
+        <link rel='icon' href='./favicon.ico' />
       </head>
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} h-screen overflow-x-hidden overflow-y-scroll`}>
         <ThemeSetter />
-        <Header className="z-10" />
-        {children}
+        <Header className='fixed z-10 mt-4' />
+        <div className='wrapper px-6 lg:px-32 2xl:px-[16vw] h-screen'>
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -29,17 +29,13 @@ export function Button({
       {...props}
       className={
         `flex flex-row px-5 py-2 ${
-          secondary ? "bg-transparent" : "bg-accent"
+          secondary ? "bg-transparent backdrop-blur-lg inset-ring-1 inset-ring-accent" : "bg-accent"
         } rounded-full hover:brightness-[1.2] hover:contrast-[0.8] ` + className
       }
     >
       <a
         href={href}
-        className="flex flex-row gap-3 items-center"
-        style={{
-          fontSize: `${fontSize}`,
-          color: `${secondary ? "var(--accent)" : "white"}`,
-        }}
+        className={`flex text-[${fontSize}] ${secondary ? "text-accent" : "text-white"} flex-row gap-3 items-center`}
       >
         {image && (
           <Image alt="Button Icon" src={image} width={32} height={32} />

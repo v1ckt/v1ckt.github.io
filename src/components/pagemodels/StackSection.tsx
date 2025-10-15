@@ -10,25 +10,29 @@ export default function StackSection({ className }: StackSectionProps) {
   return (
     <section
       className={
-        `flex flex-col items-end justify-center px-6 md:px-24 text-center w-full gap-8
-    bg-gradient-to-b from-[transparent] to-50% to-main-bg ` + className
-      }
-    >
-      <article className="flex flex-col items-center justify-center w-full gap-4">
-        <h2 className="text-title">My Stack</h2>
-        <div className="flex flex-col items-center justify-center gap-12 w-full">
+        `flex flex-col items-end justify-center text-center w-full gap-8 bg-main-bg ` +
+        className
+      }>
+      <article className='flex flex-col items-start justify-center w-full gap-4'>
+        <h2 className='text-title'>My Stack</h2>
+        <div className='flex flex-col items-start justify-center gap-12 w-full'>
           <h4>These are the technologies I use to develop websites.</h4>
-          <ul className="flex flex-row gap-6 w-full justify-center md:justify-around items-center flex-wrap">
+          <ul className='flex flex-row w-full justify-between items-center flex-wrap'>
             {namedStack.map((ic, index) => (
-              <li key={index} className="flex-col items-center justify-center transition-all">
-                <SquaredIcon size={7} color={ic.color} icon={ic.data.src} className="scale-[.9] md:scale-100">
-                </SquaredIcon>
+              <li
+                key={index}
+                className='flex-col items-center justify-center transition-all'>
+                <SquaredIcon
+                  size={7}
+                  color={ic.color}
+                  icon={ic.data.src}
+                  className='scale-[.9] md:scale-100'></SquaredIcon>
               </li>
             ))}
           </ul>
         </div>
       </article>
-      <Clink href="#" title="All my skills" arrow />
+      <Clink href='#' title='All my skills' arrow />
     </section>
   );
 }

@@ -79,7 +79,7 @@
   --bg-pos: top left;
 
   /* accent */
-  --accent: #0665bb;
+  --accent: #2086e3;
   --accent-muted: #3a6d95;
 
   /* text */
@@ -113,11 +113,7 @@
   --card-bg: #232323;
 }
 
-@media (max-width: 768px) {
-  * {
-    font-size: 12px;
-  }
-}
+@media (max-width: 768px) {}
 
 body {
   color: var(--text);
@@ -126,44 +122,205 @@ body {
 
 h1 {
   /* @apply text-[2.5rem] md:text-[3.25rem] font-bold leading-[120%] tracking-[-0.03em]; */
-  @apply text-[2.5rem] md:text-5xl font-bold leading-[130%] tracking-[-0.03em];
+  @apply text-[2.5rem] md:text-5xl font-bold tracking-[-0.01em];
 }
 
 h2 {
-  /* @apply text-[2rem] md:text-5xl font-bold leading-[130%] tracking-[-0.03em]; */
-  @apply text-[2rem] md:text-4xl font-bold leading-[130%] tracking-[-0.03em];
+  /* @apply text-[2rem] md:text-5xl font-bold tracking-[-0.03em]; */
+  @apply text-[2rem] md:text-4xl font-bold tracking-[-0.01em];
 }
 
 h3 {
   /* @apply text-[1.8rem] md:text-4xl font-semibold leading-[120%] tracking-[-0.03em]; */
-  @apply text-[1.8rem] md:text-3xl font-semibold leading-[130%] tracking-[-0.03em];
+  @apply text-[1.8rem] md:text-3xl font-semibold tracking-[-0.01em];
 }
 
 h4 {
-  /* @apply text-[1.8rem] md:text-[32px] font-medium leading-[130%] tracking-[-0.03em]; */
-  @apply text-[1.8rem] md:text-2xl font-semibold leading-[130%] tracking-[-0.03em];
+  /* @apply text-[1.8rem] md:text-[32px] font-medium tracking-[-0.03em]; */
+  @apply text-[1.8rem] md:text-2xl font-semibold tracking-[-0.01em];
 }
 
 h5 {
-  /* @apply text-[1.4rem] md:text-[24px] font-medium leading-[130%] tracking-[-0.03em]; */
-  @apply text-[1.4rem] md:text-xl font-medium leading-[130%] tracking-[-0.03em];
+  /* @apply text-[1.4rem] md:text-[24px] font-medium tracking-[-0.03em]; */
+  @apply text-[1.4rem] md:text-xl font-medium tracking-[-0.01em];
 }
 
 h6 {
-  /* @apply text-[1.2rem] md:text-[20px] font-medium leading-[130%] tracking-[-0.03em]; */
-  @apply text-[1.2rem] md:text-lg font-medium leading-[130%] tracking-[-0.03em];
+  /* @apply text-[1.2rem] md:text-[20px] font-medium tracking-[-0.03em]; */
+  @apply text-[1.2rem] md:text-lg font-medium tracking-[-0.01em];
 }
 
 p {
   /* @apply text-base font-medium tracking-[-0.04em]; */
-  @apply tracking-[-0.04em];
+  @apply tracking-[-0.01em];
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .aalt {
+    font-feature-settings: "aalt" 1
+  }
+
+  .c2sc {
+    font-feature-settings: "c2sc" 1
+  }
+
+  .calt {
+    font-feature-settings: "calt" 1
+  }
+
+  .case {
+    font-feature-settings: "case" 1
+  }
+
+  .ccmp {
+    font-feature-settings: "ccmp" 1
+  }
+
+  .cpsp {
+    font-feature-settings: "cpsp" 1
+  }
+
+  .cv01 {
+    font-feature-settings: "cv01" 1
+  }
+
+  .cv02 {
+    font-feature-settings: "cv02" 1
+  }
+
+  .cv03 {
+    font-feature-settings: "cv03" 1
+  }
+
+  .cv04 {
+    font-feature-settings: "cv04" 1
+  }
+
+  .cv05 {
+    font-feature-settings: "cv05" 1
+  }
+
+  .cv06 {
+    font-feature-settings: "cv06" 1
+  }
+
+  .cv07 {
+    font-feature-settings: "cv07" 1
+  }
+
+  .cv08 {
+    font-feature-settings: "cv08" 1
+  }
+
+  .cv09 {
+    font-feature-settings: "cv09" 1
+  }
+
+  .cv10 {
+    font-feature-settings: "cv10" 1
+  }
+
+  .cv11 {
+    font-feature-settings: "cv11" 1
+  }
+
+  .cv12 {
+    font-feature-settings: "cv12" 1
+  }
+
+  .cv13 {
+    font-feature-settings: "cv13" 1
+  }
+
+  .dlig {
+    font-feature-settings: "dlig" 1
+  }
+
+  .dnom {
+    font-feature-settings: "dnom" 1
+  }
+
+  .frac {
+    font-feature-settings: "frac" 1
+  }
+
+  .locl {
+    font-feature-settings: "locl" 1
+  }
+
+  .numr {
+    font-feature-settings: "numr" 1
+  }
+
+  .ordn {
+    font-feature-settings: "ordn" 1
+  }
+
+  .pnum {
+    font-feature-settings: "pnum" 1
+  }
+
+  .salt {
+    font-feature-settings: "salt" 1
+  }
+
+  .sinf {
+    font-feature-settings: "sinf" 1
+  }
+
+  .ss01 {
+    font-feature-settings: "ss01" 1
+  }
+
+  .ss02 {
+    font-feature-settings: "ss02" 1
+  }
+
+  .ss03 {
+    font-feature-settings: "ss03" 1
+  }
+
+  .ss04 {
+    font-feature-settings: "ss04" 1
+  }
+
+  .ss05 {
+    font-feature-settings: "ss05" 1
+  }
+
+  .ss06 {
+    font-feature-settings: "ss06" 1
+  }
+
+  .ss07 {
+    font-feature-settings: "ss07" 1
+  }
+
+  .ss08 {
+    font-feature-settings: "ss08" 1
+  }
+
+  .subs {
+    font-feature-settings: "subs" 1
+  }
+
+  .sups {
+    font-feature-settings: "sups" 1
+  }
+
+  .tnum {
+    font-feature-settings: "tnum" 1
+  }
+
+  .zero {
+    font-feature-settings: "zero" 1
+  }
 }
+
 
 /* pseudoelements */
 ::-webkit-scrollbar {

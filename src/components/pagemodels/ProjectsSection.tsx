@@ -48,7 +48,7 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
   return (
     <section
       className={
-        `flex flex-col items-center justify-start px-6 md:px-24 bg-main-bg ` +
+        `flex flex-col items-center justify-start bg-main-bg ` +
         className
       }
     >
