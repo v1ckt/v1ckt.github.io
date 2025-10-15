@@ -59,7 +59,7 @@ export default function HeroPage({ className }: HeroPageProps) {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [getWords()]);
+  }, [getWords(), dWords]);
 
   return (
     <section
