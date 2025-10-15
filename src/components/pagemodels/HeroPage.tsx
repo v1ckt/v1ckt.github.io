@@ -70,7 +70,7 @@ export default function HeroPage({ className }: HeroPageProps) {
           <div className='flex flex-col gap-3 text-start'>
             <h3 className=''>Hi, my name is Vicktor</h3>
             <p className='text-title text-left font-bold text-3xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-wrap'>
-              Let's create something <br />
+              Let&apos;s create something <br />
               <span
                 className='bg-gradient-to-r from-cyan-300 to-blue-500 pb-4 text-transparent bg-clip-text transition-all duration-500'
                 ref={dWordRef}>
