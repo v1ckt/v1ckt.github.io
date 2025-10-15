@@ -16,9 +16,9 @@ export default function CV() {
   const separator = <li className='w-full h-px bg-[gray]/20' />;
 
   return (
-    <div className='absolute top-0 left-0 bg-main-bg z-20'>
+    <div className='absolute top-0 left-0 w-full h-screen overflow-scroll bg-main-bg z-20'>
       <header
-        className={`flex z-auto sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 md:px-24 select-none border-b-px border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}>
+        className={`flex z-auto sticky print:absolute top-0 left-0 items-center justify-between print:px-2 w-full py-4 px-6 lg:px-32 2xl:px-[16vw] select-none border-b-px border-header-border-color backdrop-blur-xl bg-header-bg transition-all`}>
         <div className='flex flex-row items-center gap-4 text-title'>
           <Link href='/'>
             <SlArrowLeft className='text-text size-7 print:hidden' />
@@ -41,7 +41,7 @@ export default function CV() {
           onClick={handleSaveAsPDF}
         />
       </header>
-      <main className='flex flex-col-reverse print:mt-24 md:flex-row items-start justify-center gap-4 w-full h-full text-left px-6 md:px-24 print:px-4 pt-4 pb-4 bg-main-bg'>
+      <main className='flex flex-col-reverse print:mt-24 md:flex-row items-start justify-center gap-4 w-full text-left print:px-4 pt-4 pb-4 bg-main-bg px-6 lg:px-32 2xl:px-[16vw]'>
         <Card className='flex max-w-[360px] md:w-auto'>
           <div className='flex flex-col gap-4'>
             <div className='flex flex-col gap-3'>
