@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "../ui/button";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface HeroPageProps {
   className?: string;
@@ -39,23 +39,27 @@ export default function HeroPage({ className }: HeroPageProps) {
   Sincerely,
   Vicktor Teixeira.`;
 
+  const getWords = useCallback(() => {
+    return dWords;
+  }, [dWords]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       dWordRef.current?.classList.add("blur-md", "opacity-5");
 
       setTimeout(() => {
-        const randomWord = Math.floor(Math.random() * dWords.length);
+        const randomWord = Math.floor(Math.random() * getWords().length);
         setDWord(
           dWordRef.current?.innerText === dWords[randomWord]
-            ? dWords[randomWord]
-            : dWords[randomWord]
+            ? getWords()[randomWord]
+            : getWords()[randomWord]
         );
         dWordRef.current?.classList.remove("blur-md", "opacity-5");
       }, 250);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [dWords]);
+  }, [getWords()]);
 
   return (
     <section
