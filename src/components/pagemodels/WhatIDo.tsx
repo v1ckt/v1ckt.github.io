@@ -1,8 +1,35 @@
+import { CiGrid42 } from "react-icons/ci";
+import {
+  IoCode,
+  IoCodeSlashOutline,
+  IoGridOutline,
+  IoPhonePortrait,
+  IoPhonePortraitOutline,
+} from "react-icons/io5";
+import { MdDeveloperBoard } from "react-icons/md";
+
 interface whatIDoProps {
   className?: string;
 }
 
 export default function WhatIDo({ className }: whatIDoProps) {
+  const items = [
+    {
+      icon: <IoGridOutline size={32} />,
+      title: "UI/UX Design",
+      description: "Create unique design for user interfaces.",
+    },
+    {
+      icon: <IoCodeSlashOutline size={32} />,
+      title: "Development",
+      description: "Build complete applications for multiple devices.",
+    },
+    {
+      icon: <IoPhonePortraitOutline size={32} />,
+      title: "Flexibility",
+      description: "Build applications for different devices and environments.",
+    },
+  ];
   return (
     <section
       className={
@@ -10,6 +37,21 @@ export default function WhatIDo({ className }: whatIDoProps) {
         className
       }>
       <h2 className='text-title'>What I Do</h2>
+      <div className='flex flex-row items-stretch justify-between gap-6 overflow-auto w-full flex-wrap'>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className='flex flex-col justify-between bg-header-bg rounded-[1rem] border-[1px] border-header-border-color gap-8 p-4 max-w-sm'>
+            <div className='bg-header-bg rounded-[1rem] w-fit border-[1px] border-header-border-color p-4 gap-4'>
+              {item.icon}
+            </div>
+            <div className='flex flex-col items-start jusitfy-start text-start gap-3'>
+              <h3 className='text-title'>{item.title}</h3>
+              <h5 className='font-semibold'>{item.description}</h5>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

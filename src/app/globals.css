@@ -36,7 +36,7 @@
 :root {
   /* background */
   --main-bg: #fefefe;
-  --header-bg: #fefefeD0;
+  --header-bg: #fefefeff;
   --bg-pos: top;
 
   /* accent */
@@ -74,8 +74,8 @@
 
 [data-theme="dark"] {
   /* background */
-  --main-bg: #121212;
-  --header-bg: #121212d9;
+  --main-bg: #101112;
+  --header-bg: #121314ff;
   --bg-pos: top left;
 
   /* accent */
@@ -321,7 +321,6 @@ p {
   }
 }
 
-
 /* pseudoelements */
 ::-webkit-scrollbar {
   width: 10px;
@@ -351,7 +350,6 @@ p {
     height: .5rem;
   }
 }
-
 
 @keyframes windowOpen {
   0% {

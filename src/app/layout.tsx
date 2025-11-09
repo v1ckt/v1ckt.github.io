@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import ThemeSetter from "@/components/config/themeSetter";
-import "./globals.css";
 import Header from "@/components/header/header";
+import "./globals.css";
 
 const inter = localFont({
   src: "./fonts//inter//InterVariable.woff2",
@@ -30,14 +30,16 @@ export default function RootLayout({
         />
         <link rel='canonical' href='https://v1ckt.github.io' />
         <link rel='icon' href='./favicon.ico' />
+        <ThemeSetter />
       </head>
       <body
         className={`${inter.className} h-screen overflow-x-hidden overflow-y-scroll`}>
-        <ThemeSetter />
-        <Header className='fixed z-10 mt-4' />
+        <Header className='z-50' />
+        <div className='fixed z-10 top-0 left-0 w-screen h-20 bg-gradient-to-b from-0% from-main-bg/80 to-transparent to-100%' />
         <div className='wrapper px-6 lg:px-32 2xl:px-[16vw] h-screen'>
           {children}
         </div>
+        <div className='fixed z-10 bottom-0 left-0 w-screen h-20 bg-gradient-to-t from-0% from-main-bg/80 to-transparent to-100%' />
       </body>
     </html>
   );

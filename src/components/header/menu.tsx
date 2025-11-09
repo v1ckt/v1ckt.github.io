@@ -31,10 +31,8 @@ export default function Menu({
   return (
     <div
       className={
-        `flex flex-row gap-2 px-5 items-start text-title justify-between select-none rounded-b-[2rem] backdrop-saturate-200 backdrop-contrast-75 backdrop-blur-xl bg-header-bg ease-in-out transition-all duration-500 overflow-hidden ${
-          isOpen
-            ? "border-[1px] border-t-0 border-header-border-color py-6 max-h-screen shadow-2xl/10"
-            : "border-transparent max-h-[0px] -mt-7"
+        `flex flex-row gap-2 px-5 items-start text-title justify-between select-none ease-in-out transition-all duration-500 overflow-hidden ${
+          isOpen ? "max-h-screen py-5" : "max-h-[0px]"
         }
         ` + className
       }>

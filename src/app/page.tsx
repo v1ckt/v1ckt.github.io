@@ -9,14 +9,6 @@ export default function Home() {
   return (
     <main className='overflow-visible'>
       <div className='relative w-full flex flex-col items-center justify-between gap-16'>
-        <div
-          className='absolute -z-10 left-[50%] translate-x-[-50%] inset-0 w-screen transition-none mt-16 opacity-[.05] to-main-bg pointer-events-none'
-          style={{
-            backgroundImage: "url('/static/images/bg.svg')",
-            backgroundSize: "59rem",
-            backgroundPosition: "var(--bg-pos)",
-          }}
-        />
         <div></div>
         <HeroPage />
         <WhatIDo />

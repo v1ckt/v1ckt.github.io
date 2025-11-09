@@ -102,7 +102,7 @@ export default function HeroPage({ className }: HeroPageProps) {
         </span>
       </div>
       {/* <div className=""></div> */}
-      <div className='absolute top-[85vh] flex flex-col items-center gap-2 md:hidden'>
+      <div className='absolute top-[90vh] left-[50%] -translate-x-[50%] flex flex-col items-center gap-2 md:hidden'>
         <p data-nosnippet>Scroll down</p>
         <svg
           xmlns='http://www.w3.org/2000/svg'
