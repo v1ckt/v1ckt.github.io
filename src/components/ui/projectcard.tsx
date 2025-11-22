@@ -72,7 +72,7 @@ export default function ProjectCard({
     <div
       className={`flex ${
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
-      } items-center justify-between gap-10 md:gap-16`}
+      } items-start justify-between gap-10 md:gap-16`}
       style={{ maxWidth: "85vw" }}>
       <figure
         className='flex flex-row items-center justify-center relative w-full h-full group rounded-2xl overflow-hidden'
@@ -261,40 +261,45 @@ export default function ProjectCard({
         </div>
       )}
       <div
-        className='flex flex-col items-left justify-between gap-10 px-0 max-w-full'
+        className='flex flex-col items-start justify-evenly h-[-webkit-fill-available]'
         // style={{ maxWidth: "50vw" }}
       >
-        <span className='flex flex-col items-left gap-4'>
-          {/* text-title */}
-          <article className='flex flex-col gap-3 max-w-screen-lg'>
-            <h4 className='text-title font-bold'>{title}</h4>
-            <h5 className='text-text'>{description}</h5>
-          </article>
-          {/* markers */}
-          <span className='flex flex-row gap-2.5 items-left justify-left items-center'>
+        {/* <div /> */}
+        <div className='flex flex-col items-start justify-evenly gap-6'>
+          <span className='flex flex-col items-left gap-4'>
+            {/* text-title */}
+            <article className='flex flex-col gap-3 max-w-screen-lg'>
+              <h4 className='text-title font-bold'>{title}</h4>
+              <h5 className='text-text'>{description}</h5>
+            </article>
             {/* markers */}
-            {technologies.map((t, index) => (
-              <div
-                className='bg-project-marker px-4 py-1 text-marker-text rounded-full'
-                key={index}>
-                <p className='font-semibold text-base md:text-sm'>{t}</p>
-              </div>
-            ))}
+            <span className='flex flex-row gap-2.5 items-left justify-left items-center'>
+              {/* markers */}
+              {technologies.map((t, index) => (
+                <div
+                  className='bg-project-marker px-4 py-1 text-marker-text rounded-full'
+                  key={index}>
+                  <p className='font-semibold text-base md:text-sm'>{t}</p>
+                </div>
+              ))}
+            </span>
           </span>
-        </span>
-        {/* buttons */}
-        {github && (
-          <div className='flex flex-row-gap-4 items-center justify-left gap-4'>
-            <Button title='Github Repo' href={github} />
-            {live && (
-              <Clink
-                href={live}
-                title='Live Site'
-                className='text-lg hover:brightness-[1.2] hover:contrast-[0.8]'
-              />
-            )}
-          </div>
-        )}
+          {/* buttons */}
+          {github && (
+            <div className='flex flex-row-gap-4 items-center justify-left gap-4'>
+              <Button title='Github Repo' href={github} />
+              {live && (
+                <Clink
+                  href={live}
+                  title='Live Site'
+                  className='text-lg hover:brightness-[1.2] hover:contrast-[0.8]'
+                />
+              )}
+            </div>
+          )}
+        </div>
+        <div />
+        <div />
       </div>
     </div>
   );

@@ -32,14 +32,11 @@ export default function RootLayout({
         <link rel='icon' href='./favicon.ico' />
         <ThemeSetter />
       </head>
-      <body
-        className={`${inter.className}`}>
+      <body className={`${inter.className}`}>
         <Header className='z-50' />
-        <div className='fixed z-10 top-0 left-0 w-screen h-25 bg-gradient-to-b from-0% from-main-bg/60 to-transparent to-100%' />
-        <div className='wrapper px-6 lg:px-32 2xl:px-[16vw]'>
-          {children}
-        </div>
-        <div className='fixed z-10 bottom-0 left-0 w-screen h-20 bg-gradient-to-t from-0% from-main-bg/60 to-transparent to-100%' />
+        <div className='fixed z-10 top-0 left-0 w-screen h-50 bg-gradient-to-b from-0% from-main-bg/30 to-transparent to-100%' />
+        <div className='wrapper px-6 lg:px-32 2xl:px-[16vw]'>{children}</div>
+        <div className='fixed z-10 bottom-0 left-0 w-screen h-50 bg-gradient-to-t from-0% from-main-bg/30 to-transparent to-100%' />
       </body>
     </html>
   );

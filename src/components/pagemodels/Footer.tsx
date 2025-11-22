@@ -9,7 +9,7 @@ export default function Footer({ className }: footerProps) {
   const links = [...namedLinks].filter((l, index) => index < 3);
   const options = [...namedLinks].filter((l, index) => index > 2);
   return (
-    <footer className={'flex flex-col pb-8 w-full justify-center items-center gap-16 bg-main-bg ' + className}>
+    <footer className={'flex flex-col p-8 w-full justify-center items-center gap-16 bg-header-bg rounded-t-[1.7rem] border-[1px] border-header-border-color ' + className}>
       <h2 className='text-title'>Thanks for coming!</h2>
       <div className='flex flex-col w-full items-center gap-4'>
         <div className='flex flex-row w-full items-start gap-16 md:gap-32'>

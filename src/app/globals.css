@@ -36,7 +36,7 @@
 :root {
   /* background */
   --main-bg: #fefefe;
-  --header-bg: #fafafaff;
+  --header-bg: #fafafa;
   --bg-pos: top;
 
   /* accent */
@@ -74,8 +74,8 @@
 
 [data-theme="dark"] {
   /* background */
-  --main-bg: #101112;
-  --header-bg: #151515ff;
+  --main-bg: #121212;
+  --header-bg: #161616;
   --bg-pos: top left;
 
   /* accent */
