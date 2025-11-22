@@ -63,27 +63,29 @@ export default function HeroPage({ className }: HeroPageProps) {
 
   return (
     <section
-      className={`flex flex-col-reverse items-start justify-start w-full pt-[5vh] pb-[5vh] md:flex-row ${className}`}>
-      <div className='flex flex-col align-center gap-7 items-start mb-72 md:mb-0 relative'>
+      className={`flex flex-col-reverse items-start justify-start w-full md:pt-[5vh] md:pb-[5vh] md:flex-row ${className}`}>
+      <div className='flex flex-col align-center gap-12 -mt-16 md:p-0 items-start relative'>
         <article className='flex flex-col gap-6 items-start'>
           {/* <ProfilePic size={5} /> */}
           <div className='flex flex-col gap-3 text-start'>
-            <h3 className=''>Hi, my name is Vicktor</h3>
-            <p className='text-title text-left font-bold text-3xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-wrap'>
+            <p className='font-semibold text-2xl md:text-3xl'>
+              Hi, my name is Vicktor
+            </p>
+            <p className='text-title text-left font-bold text-7xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-wrap'>
               Let&apos;s create something <br />
               <span
-                className='bg-gradient-to-r from-cyan-300 to-blue-500 pb-4 text-transparent bg-clip-text transition-all duration-500 drop-shadow-2xl drop-shadow-cyan-400/15'
+                className='bg-gradient-to-r from-cyan-300 to-blue-500 pb-4 text-transparent bg-clip-text transition-all duration-500 drop-shadow-2xl drop-shadow-cyan-400/15 wrap-anywhere'
                 ref={dWordRef}>
-                {dWord}
+                {dWord}&nbsp;
               </span>
-              &nbsp;together
+              together
             </p>
             {/* <h1 className="text-title text-bolder">
               Frontend engineer and computer science bachelor.
             </h1> */}
           </div>
         </article>
-        <span className='flex flex-row  justify-center items-center gap-6'>
+        <span className='flex flex-row justify-center items-center gap-6'>
           <Button
             className='hover:brightness-[1.2] hover:contrast-[0.8] text-base'
             title='Get in touch'
@@ -102,22 +104,6 @@ export default function HeroPage({ className }: HeroPageProps) {
         </span>
       </div>
       {/* <div className=""></div> */}
-      <div className='absolute top-[90vh] left-[50%] -translate-x-[50%] flex flex-col items-center gap-2 md:hidden'>
-        <p data-nosnippet>Scroll down</p>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          className='animate-bounce h-6 w-6'
-          fill='none'
-          viewBox='0 0 24 24'
-          stroke='currentColor'>
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M19 14l-7 7m0 0l-7-7m7 7V3'
-          />
-        </svg>
-      </div>
     </section>
   );
 }

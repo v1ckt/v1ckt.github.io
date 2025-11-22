@@ -11,12 +11,12 @@ export default function Footer({ className }: footerProps) {
   return (
     <footer
       className={
-        "flex flex-col p-8 w-full justify-center items-center gap-16 bg-header-bg rounded-t-[1.8rem] border-[1px] border-header-border-color " +
+        "flex flex-col p-8 w-full justify-center items-center gap-8 md:gap-16 bg-header-bg rounded-t-[1.8rem] border-[1px] border-header-border-color " +
         className
       }>
       <h2 className='text-title'>Thanks for coming!</h2>
-      <div className='flex flex-col w-full items-center gap-4'>
-        <div className='flex flex-row w-full items-start gap-16 md:gap-32'>
+      <div className='flex flex-col w-full items-center gap-8'>
+        <div className='flex flex-col md:flex-row w-full items-start gap-8 md:gap-32'>
           <ul className='flex flex-col items-left gap-4'>
             <li>
               <p className='text-title/80 font-bold'>Contact/Social</p>
@@ -36,7 +36,7 @@ export default function Footer({ className }: footerProps) {
           </ul>
           <ul className='flex flex-col items-left gap-4'>
             <li>
-              <p className='text-title/80 font-bold'>Options</p>
+              <p className='text-title/80 font-bold'>Other</p>
             </li>
             {options.map((l, index) => (
               <li key={index} className='group'>
@@ -50,7 +50,7 @@ export default function Footer({ className }: footerProps) {
             ))}
           </ul>
         </div>
-        <span className='inline-flex gap-2'>
+        <span className='inline-flex gap-2 text-center'>
           <p className=''>© 2024 Vicktor Teixeira | Made with Next Js</p>
         </span>
       </div>

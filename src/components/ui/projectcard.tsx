@@ -72,7 +72,7 @@ export default function ProjectCard({
     <div
       className={`flex ${
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
-      } items-start justify-between gap-10 md:gap-16`}
+      } items-center md:items-start justify-between gap-10 md:gap-16`}
       style={{ maxWidth: "85vw" }}>
       <figure
         className='flex flex-row items-center justify-center relative w-full h-full group rounded-2xl overflow-hidden'
@@ -273,7 +273,7 @@ export default function ProjectCard({
               <h5 className='text-text'>{description}</h5>
             </article>
             {/* markers */}
-            <span className='flex flex-row gap-2.5 items-left justify-left items-center'>
+            <span className='flex flex-row gap-2.5 items-left justify-left items-center flex-wrap'>
               {/* markers */}
               {technologies.map((t, index) => (
                 <div

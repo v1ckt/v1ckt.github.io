@@ -41,7 +41,7 @@ export default function Menu({
           isOpen ? "" : "opacity-0"
         }`}>
         <ul
-          className={`flex flex-col gap-5 self-start md:self-center cursor-pointer pt-10 md:pt-0`}>
+          className={`flex flex-col gap-5 self-start md:self-center cursor-pointer md:pt-0`}>
           {options.map((option, index) => (
             <li key={index}>
               {option === title ? (
