@@ -37,7 +37,7 @@ export default function Menu({
         ` + className
       }>
       <nav
-        className={`flex flex-row items-start justify-between w-full h-full transition-all duration-500 ${
+        className={`flex flex-row items-start justify-between w-full h-content transition-all duration-500 ${
           isOpen ? "" : "opacity-0"
         }`}>
         <ul

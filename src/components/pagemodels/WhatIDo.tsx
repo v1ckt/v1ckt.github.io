@@ -41,7 +41,7 @@ export default function WhatIDo({ className }: whatIDoProps) {
         {items.map((item, index) => (
           <div
             key={index}
-            className='flex flex-col justify-between bg-header-bg rounded-[1rem] border-[1px] border-header-border-color gap-8 p-4 max-w-sm'>
+            className='flex flex-col justify-between bg-header-bg rounded-[1.8rem] border-[1px] border-header-border-color gap-8 p-4 max-w-sm'>
             <div className='bg-header-bg rounded-[1rem] w-fit border-[1px] border-header-border-color p-4 gap-4'>
               {item.icon}
             </div>

@@ -8,7 +8,7 @@ import WhatIDo from "@/components/pagemodels/WhatIDo";
 export default function Home() {
   return (
     <main className='overflow-visible'>
-      <div className='relative w-full flex flex-col items-center justify-between gap-16'>
+      <div className='relative w-full flex flex-col items-center justify-between gap-52'>
         <div></div>
         <HeroPage />
         <WhatIDo />

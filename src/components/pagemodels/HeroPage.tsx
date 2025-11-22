@@ -63,7 +63,7 @@ export default function HeroPage({ className }: HeroPageProps) {
 
   return (
     <section
-      className={`flex flex-col-reverse items-start justify-start w-full pt-[15vh] pb-[15vh] md:flex-row ${className}`}>
+      className={`flex flex-col-reverse items-start justify-start w-full pt-[5vh] pb-[5vh] md:flex-row ${className}`}>
       <div className='flex flex-col align-center gap-7 items-start mb-72 md:mb-0 relative'>
         <article className='flex flex-col gap-6 items-start'>
           {/* <ProfilePic size={5} /> */}

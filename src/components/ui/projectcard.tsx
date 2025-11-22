@@ -72,10 +72,10 @@ export default function ProjectCard({
     <div
       className={`flex ${
         ltr === true ? "flex-col md:flex-row" : "flex-col md:flex-row-reverse"
-      } items-center justify-evenly gap-10 md:gap-16`}
+      } items-center justify-between gap-10 md:gap-16`}
       style={{ maxWidth: "85vw" }}>
       <figure
-        className='flex flex-row items-center justify-center relative w-full h-full group rounded-2xl drop-shadow-2xl overflow-hidden'
+        className='flex flex-row items-center justify-center relative w-full h-full group rounded-2xl overflow-hidden'
         style={{
           width: "auto",
           maxWidth: "100%",
@@ -162,17 +162,22 @@ export default function ProjectCard({
           className='w-full h-full fixed top-0 left-0 z-50
           bg-header-bg flex items-center justify-center'>
           <div className='flex flex-row items-center justify-between w-screen h-screen px-4'>
-            <span
-              className='flex items-center justify-center p-2 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all'
-              onClick={prevItem}>
-              <SlArrowLeft
-                size={36}
-                className='px-2 text-zinc-400 cursor-pointer'
-              />
-            </span>
+            {images.length > 1 && (
+              <span
+                className='flex items-center justify-center p-2 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all'
+                onClick={prevItem}>
+                <SlArrowLeft
+                  size={36}
+                  className='px-2 text-zinc-400 cursor-pointer'
+                />
+              </span>
+            )}
             <div
-              className='max-w-[90%] max-h-[90%] md:max-w-[90%] md:max-h-[95%] w-full h-full transition-all
-            flex items-center justify-between flex-col gap-4 overflow-hidden'>
+              className={`${
+                images.length > 1
+                  ? "max-w-[90%] md:max-w-[90%]"
+                  : "max-w-[100%] max-h-[100%]"
+              } max-h-[90%] md:max-h-[95%] w-full h-full transition-all flex items-center justify-between flex-col gap-4 overflow-hidden`}>
               <h4 className='font-bold'>{title}</h4>
               {/* open iframe when animations conclude */}
               {/* <div
@@ -242,19 +247,21 @@ export default function ProjectCard({
                 <p className='text-text'>Close</p>
               </span>
             </div>
-            <span
-              className='flex items-center justify-center p-2 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all'
-              onClick={nextItem}>
-              <SlArrowRight
-                size={36}
-                className='px-2 text-zinc-400 cursor-pointer'
-              />
-            </span>
+            {images.length > 1 && (
+              <span
+                className='flex items-center justify-center p-2 cursor-pointer rounded-full hover:bg-[#8b8b8b30] transition-all'
+                onClick={nextItem}>
+                <SlArrowRight
+                  size={36}
+                  className='px-2 text-zinc-400 cursor-pointer'
+                />
+              </span>
+            )}
           </div>
         </div>
       )}
       <div
-        className='flex flex-col items-left justify-start gap-6 px-0 max-w-xl'
+        className='flex flex-col items-left justify-between gap-10 px-0 max-w-full'
         // style={{ maxWidth: "50vw" }}
       >
         <span className='flex flex-col items-left gap-4'>

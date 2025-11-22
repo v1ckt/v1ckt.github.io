@@ -64,9 +64,9 @@ export default function ProjectSection({ className }: ProjectSectionProps) {
         </article>
         <Clink href="#" title="View more projects" arrow />
       </div>
-      <ul className="flex flex-col gap-16 md:gap-32 pt-8 md:pt-16">
+      <ul className="flex flex-col gap-16 md:gap-16 pt-8 md:pt-16">
         {projects.map((p, index) => (
-          <li key={index} className="">
+          <li key={index} className="border-[1px] p-4 rounded-[1.8rem] border-header-border-color bg-header-bg">
             <ProjectCard
               title={p.title}
               description={p.description}
