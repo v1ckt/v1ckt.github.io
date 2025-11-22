@@ -72,7 +72,7 @@ export default function HeroPage({ className }: HeroPageProps) {
             <p className='text-title text-left font-bold text-3xl sm:text-6xl lg:text-7xl 2xl:text-8xl text-wrap'>
               Let&apos;s create something <br />
               <span
-                className='bg-gradient-to-r from-cyan-300 to-blue-500 pb-4 text-transparent bg-clip-text transition-all duration-500'
+                className='bg-gradient-to-r from-cyan-300 to-blue-500 pb-4 text-transparent bg-clip-text transition-all duration-500 drop-shadow-2xl drop-shadow-cyan-400/15'
                 ref={dWordRef}>
                 {dWord}
               </span>
