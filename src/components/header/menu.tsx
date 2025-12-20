@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { RiCloseFill, RiMenuFill } from "react-icons/ri";
+"use client";
+
+import { useEffect, useState, useTransition } from "react";
 
 interface MenuProps {
   state?: "Home" | "About" | "Blog" | "Skills" | "Projects";
@@ -14,19 +15,19 @@ export default function Menu({
   fn,
   isOpen,
 }: MenuProps) {
-  const [title, setTitle] = useState(page);
+  const [windowHref, setWindowHref] = useState("");
   const options = [
-    "Home",
-    "About me",
-    "Blog",
-    "Skills",
-    "Projects",
-    "Experience",
+    { title: "Home", url: "/" },
+    { title: "About me", url: "/about" },
+    { title: "Blog", url: "/blog" },
+    { title: "Skills", url: "/skills" },
+    { title: "Projects", url: "/projects" },
+    { title: "Experience", url: "/experience" },
   ];
 
   useEffect(() => {
-    setTitle(page!);
-  }, [page]);
+    setWindowHref(window.location.href);
+  });
 
   return (
     <div
@@ -44,11 +45,13 @@ export default function Menu({
           className={`flex flex-col gap-5 self-start md:self-center cursor-pointer md:pt-0`}>
           {options.map((option, index) => (
             <li key={index}>
-              {option === title ? (
-                <h1>{title}</h1>
+              {windowHref.endsWith(option.url) ? (
+                <h1>{option.title}</h1>
               ) : (
-                <a href=''>
-                  <h1 className='text-text hover:brightness-75'>{option}</h1>
+                <a href={option.url}>
+                  <h1 className='text-text hover:brightness-75'>
+                    {option.title}
+                  </h1>
                 </a>
               )}
             </li>

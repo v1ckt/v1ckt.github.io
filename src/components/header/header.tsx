@@ -21,7 +21,7 @@ export default function Header({ className }: headerProps) {
   const [expandedHeader, setExpandedHeader] = useState(true);
 
   const handleScroll = () => {
-    window.scrollY > 100 ? setExpandedHeader(false) : setExpandedHeader(true);
+    window.scrollY > 80 ? setExpandedHeader(false) : setExpandedHeader(true);
   };
 
   useEffect(() => {
@@ -44,7 +44,9 @@ export default function Header({ className }: headerProps) {
         className={`flex flex-col items-center justify-center rounded-[2.2rem] select-none border-[1px] ${
           menuOpen && !expandedHeader ? "shadow-2xl/10" : ""
         } ${
-          expandedHeader ? "border-transparent bg-main-bg" : "border-header-border-color bg-header-bg shadow-2xl/10"
+          expandedHeader
+            ? "border-transparent bg-main-bg"
+            : "border-header-border-color bg-header-bg shadow-2xl/10"
         }`}>
         <div
           className={`px-4 flex flex-row py-4 items-center justify-between w-full ease-out transition-all duration-[250ms] border-b-[1px] ${

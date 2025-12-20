@@ -11,7 +11,7 @@ export default function Footer({ className }: footerProps) {
   return (
     <footer
       className={
-        "flex flex-col p-8 w-full justify-center items-center gap-8 md:gap-16 bg-header-bg rounded-t-[1.8rem] border-[1px] border-header-border-color " +
+        "flex flex-col p-8 w-full justify-center items-center gap-8 md:gap-16 bg-header-bg rounded-t-[1.8rem] border-[1px] border-header-border-color pb-24 " +
         className
       }>
       <h2 className='text-title'>Thanks for coming!</h2>

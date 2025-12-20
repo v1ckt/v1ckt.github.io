@@ -45,8 +45,8 @@ export default function WhatIDo({ className }: whatIDoProps) {
             <div className='bg-header-bg rounded-[1rem] w-fit border-[1px] border-header-border-color p-4 gap-4'>
               {item.icon}
             </div>
-            <div className='flex flex-col items-start jusitfy-start text-start gap-3'>
-              <h3 className='text-title'>{item.title}</h3>
+            <div className='flex flex-col items-start justify-start text-start gap-2'>
+              <h4 className='text-title font-semibold'>{item.title}</h4>
               <h5 className='font-semibold'>{item.description}</h5>
             </div>
           </div>

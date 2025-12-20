@@ -6,9 +6,9 @@ interface ProfileProps {
 
 export default function Profile({ size }: ProfileProps) {
   return (
-    <div className="flex items-center gap-2">
+    <div className='flex items-center gap-2'>
       <ProfilePic size={size} />
-      <p className="font-normal">Vicktor Teixeira</p>
+      <p className='font-bold text-title/70'>Vicktor Teixeira</p>
     </div>
   );
 }
