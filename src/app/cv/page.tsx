@@ -6,7 +6,6 @@ import Link from "next/link";
 import ProfilePic from "@/components/header/profilepic";
 import { SlArrowLeft } from "react-icons/sl";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 
 export default function CV() {
   const handleSaveAsPDF = () => {
