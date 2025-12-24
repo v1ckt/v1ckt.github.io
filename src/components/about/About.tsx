@@ -40,7 +40,7 @@ export default function About({ className }: aboutProps) {
       <h2 className='text-title'>About me</h2>
       <div className='flex flex-col items-stretch justify-between gap-6 overflow-auto w-full'>
         <div className='flex flex-col lg:flex-row-reverse items-start lg:items-start justify-center gap-12 lg:gap-20'>
-          <div className='p-4 bg-header-bg rounded-[1.8rem] border-[1px] border-header-border-color flex flex-col items-start gap-5 lg:h-[70dvh] lg:w-[100dvw]'>
+          <div className='p-4 bg-header-bg rounded-[1.8rem] border-[1px] border-header-border-color flex flex-col items-start gap-5 lg:h-[70dvh] lg:w-[100vw]'>
             <div className='flex flex-row items-center justify-between w-full'>
               <h5 className='font-semibold'>Gallery</h5>
               <div className='flex flex-row items-center justify-end'>
