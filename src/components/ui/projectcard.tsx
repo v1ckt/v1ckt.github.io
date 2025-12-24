@@ -286,7 +286,7 @@ export default function ProjectCard({
           </span>
           {/* buttons */}
           {github && (
-            <div className='flex flex-row-gap-4 items-center justify-left gap-4'>
+            <div className='flex flex-row items-center justify-end md:justify-start gap-4 w-full'>
               <Button title='Github Repo' href={github} />
               {live && (
                 <Clink

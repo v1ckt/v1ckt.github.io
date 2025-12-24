@@ -37,11 +37,11 @@ export default function WhatIDo({ className }: whatIDoProps) {
         className
       }>
       <h2 className='text-title'>What I Do</h2>
-      <div className='flex flex-row items-stretch justify-between gap-6 overflow-auto w-full flex-wrap'>
+      <div className='flex flex-row items-stretch justify-start gap-6 w-full flex-wrap'>
         {items.map((item, index) => (
           <div
             key={index}
-            className='flex flex-col justify-between bg-header-bg rounded-[1.8rem] border-[1px] border-header-border-color gap-8 p-4 max-w-sm'>
+            className='flex flex-col justify-between bg-header-bg rounded-[1.8rem] border-[1px] border-header-border-color gap-8 p-4 w-[-webkit-fill-available] md:w-sm'>
             <div className='bg-header-bg rounded-[1rem] w-fit border-[1px] border-header-border-color p-4 gap-4'>
               {item.icon}
             </div>
