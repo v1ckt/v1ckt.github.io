@@ -8,10 +8,10 @@ export const data = {
       name: "+55 (99) 9 9169-6318",
       icon: icon.phone
     },
-    address: {
-      name: `Barra do Corda/MA - Brazil`,
-      icon: icon.location
-    }
+    // address: {
+    //   name: `Barra do Corda/MA - Brazil`,
+    //   icon: icon.location
+    // }
   },
     social: {
       linkedin: {
@@ -116,7 +116,7 @@ export const data = {
           company: "Info Specter",
           level: "Júnior",
           date: "Abril 2024 - atualmente",
-          job: "Desenvolvendo sistemas para gerenciamento de atividades escolares"
+          job: "Desenvolvo aplicativos, APIs e sistemas para gerenciamento de atividades escolares."
         },
         trato: {
           title: "Desenvolvedor de Aplicativos e Projetos",

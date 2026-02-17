@@ -6,21 +6,22 @@ interface HeroPageProps {
   className?: string;
 }
 
+const dWords = [
+  "amazing",
+  "beautiful",
+  "fun",
+  "great",
+  "awesome",
+  "creative",
+  "unique",
+  "remarkable",
+  "cool",
+  "nice",
+];
+
 export default function HeroPage({ className }: HeroPageProps) {
   const [dWord, setDWord] = useState("amazing");
   const dWordRef = useRef<HTMLParagraphElement>(null);
-  const dWords = [
-    "amazing",
-    "beautiful",
-    "fun",
-    "great",
-    "awesome",
-    "creative",
-    "unique",
-    "remarkable",
-    "cool",
-    "nice",
-  ];
   const email = "txvicktor@gmail.com";
   const subject = "Web Development Inquiry";
   const body = `Hello,
@@ -39,27 +40,23 @@ export default function HeroPage({ className }: HeroPageProps) {
   Sincerely,
   Vicktor Teixeira.`;
 
-  const getWords = useCallback(() => {
-    return dWords;
-  }, [dWords]);
-
   useEffect(() => {
     const interval = setInterval(() => {
-      dWordRef.current?.classList.add("blur-md", "opacity-5");
+      if (dWordRef.current) {
+        dWordRef.current.classList.add("blur-md", "opacity-5");
 
-      setTimeout(() => {
-        const randomWord = Math.floor(Math.random() * getWords().length);
-        setDWord(
-          dWordRef.current?.innerText === dWords[randomWord]
-            ? getWords()[randomWord]
-            : getWords()[randomWord]
-        );
-        dWordRef.current?.classList.remove("blur-md", "opacity-5");
-      }, 250);
+        setTimeout(() => {
+          if (dWordRef.current) {
+            const randomWord = Math.floor(Math.random() * dWords.length);
+            setDWord(dWords[randomWord]);
+            dWordRef.current.classList.remove("blur-md", "opacity-5");
+          }
+        }, 250);
+      }
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [getWords(), dWords]);
+  }, []);
 
   return (
     <section
@@ -91,7 +88,7 @@ export default function HeroPage({ className }: HeroPageProps) {
             title='Get in touch'
             onClick={() =>
               (window.location.href = `mailto:${email}?subject=${encodeURIComponent(
-                subject
+                subject,
               )}&body=${encodeURIComponent(body)}`)
             }
           />

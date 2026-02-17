@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <head>
         <meta
           name='google-site-verification'
@@ -34,17 +34,11 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} pt-24`}>
         <Header className='z-50' />
-        <div className='gradient__blur__parent fixed pointer-events-none z-10 top-0 left-0 w-screen h-64 bg-gradient-to-b from-0% from-main-bg/70 to-transparent to-100%'>
-          <div className='gradient__blur__child'></div>
-          <div className='gradient__blur__child'></div>
-          <div className='gradient__blur__child'></div>
+        <div className='gradient__blur__parent fixed pointer-events-none z-10 top-0 left-0 w-screen h-64 bg-gradient-to-b from-0% from-main-bg to-transparent to-100%'>
           <div className='gradient__blur__child'></div>
         </div>
         <div className='wrapper px-6 lg:px-32 2xl:px-[16vw]'>{children}</div>
-        <div className='gradient__blur__parent__reverse fixed pointer-events-none z-10 bottom-0 left-0 w-screen h-64 bg-gradient-to-t from-0% from-main-bg/70 to-transparent to-100%'>
-          <div className='gradient__blur__child__reverse'></div>
-          <div className='gradient__blur__child__reverse'></div>
-          <div className='gradient__blur__child__reverse'></div>
+        <div className='gradient__blur__parent__reverse fixed pointer-events-none z-10 bottom-0 left-0 w-screen h-64 bg-gradient-to-t from-0% from-main-bg to-transparent to-100%'>
           <div className='gradient__blur__child__reverse'></div>
         </div>
       </body>

@@ -196,7 +196,7 @@ export default function CV() {
                     <li key={key}>
                       <p className='text-title'>{value.title}</p>
                       <p>{value.job}</p>
-                      <p>{value.company}</p>
+                      <p className="font-semibold">{value.company}</p>
                       <p>{value.date}</p>
                     </li>
                   )

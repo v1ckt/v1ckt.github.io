@@ -27,7 +27,7 @@ export default function Menu({
 
   useEffect(() => {
     setWindowHref(window.location.href);
-  });
+  }, []);
 
   return (
     <div

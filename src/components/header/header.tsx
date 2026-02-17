@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { useEffect, useState } from "react";
 import Menu from "./menu";
 import Profile from "./profile";
@@ -11,12 +14,14 @@ import {
   RiMenuLine,
   RiArrowDownSLine,
 } from "react-icons/ri";
+import { MdArrowBackIos } from "react-icons/md";
 
 interface headerProps {
   className?: string;
 }
 
 export default function Header({ className }: headerProps) {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [expandedHeader, setExpandedHeader] = useState(true);
 
@@ -49,12 +54,17 @@ export default function Header({ className }: headerProps) {
             : "border-header-border-color bg-header-bg shadow-2xl/10"
         }`}>
         <div
-          className={`px-4 flex flex-row py-4 items-center justify-between w-full ease-out transition-all duration-[250ms] border-b-[1px] ${
+          className={`px-4 flex flex-row py-3 items-center justify-between w-full ease-out transition-all duration-[250ms] border-b-[1px] ${
             menuOpen && !expandedHeader
               ? "border-header-border-color"
               : "border-transparent"
           }`}>
           <div className='flex items-center gap-4 text-title transition-all duration-[250ms]'>
+            {pathname !== "/" && (
+              <Link href='/' className='-mr-3'>
+                <MdArrowBackIos className='text-title/70' size={18} />
+              </Link>
+            )}
             <Profile />
             <ThemeSwitcher />
             <div className='text-text bg-[gray]/10 px-2.5 py-1 md:cursor-help rounded-full group'>
